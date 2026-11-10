@@ -14,6 +14,8 @@
   .about .body{margin-top:56px;max-width:880px}
   .about .sign{margin-top:auto;display:flex;align-items:center;gap:22px}
 
+  .owner .ownerimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+  .owner .ownershade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,26,38,.55),rgba(18,26,38,0) 25%,rgba(18,26,38,.1) 50%,rgba(18,26,38,.96) 85%);z-index:1}
   .cur h1{font-size:124px;margin-top:16px}
   .cur .list{margin-top:44px;display:flex;flex-direction:column}
   .cur .row{display:flex;align-items:baseline;gap:34px;padding:24px 0;border-top:1px solid var(--line)}
@@ -78,7 +80,22 @@
   <div class="ticker bottom"></div>
 </section>
 
-<!-- 03 · CURADORIA -->
+<!-- 03 · QUEM É O DONO -->
+<section class="slide owner has-ticker-bottom">
+  <img class="ownerimg" src="../../assets/fotos/dono.jpg" alt="">
+  <div class="ownershade"></div>
+  <div class="ticker top dark" data-text="QUEM É O DONO"></div>
+  <div class="meta tl">GMSR — Fundador</div>
+  <div class="meta tr counter"></div>
+  <div class="content" style="justify-content:flex-end;padding-bottom:150px">
+    <p class="small accent">◆ Por trás da maison</p>
+    <h1 class="display" style="font-size:150px;margin-top:14px">Quem é<br>o dono<span class="accent">?</span></h1>
+    <p class="body" style="margin-top:24px;max-width:760px">Por trás de cada peça existe alguém que escolhe <b>uma a uma, com critério.</b></p>
+  </div>
+  <div class="ticker bottom"></div>
+</section>
+
+<!-- 04 · CURADORIA -->
 <section class="slide navy has-ticker-bottom">
   <div class="ticker top dark" data-text="CURADORIA"></div>
   <div class="meta tl">GMSR — Curadoria</div>
@@ -93,11 +110,12 @@
       <div class="row"><span class="n">04</span><span class="t">Caimento</span><span class="d">Modelagem certa para vestir bem de verdade.</span></div>
     </div>
     <p class="foot serif">Se não passa no nosso padrão, <span class="accent">não entra na maison.</span></p>
+    <img src="../../assets/fotos/acervo-mesa.jpg" style="position:absolute;right:72px;top:150px;width:300px;height:240px;object-fit:cover;object-position:50% 60%;border:6px solid var(--paper);transform:rotate(4deg);filter:brightness(1.3)" alt="">
   </div>
   <div class="ticker bottom"></div>
 </section>
 
-<!-- 04 · PILARES -->
+<!-- 05 · PILARES -->
 <section class="slide pillars has-ticker-bottom">
   <div class="ticker top dark" data-text="O PADRÃO GMSR"></div>
   <div class="meta tl">GMSR — Pilares</div>
@@ -114,7 +132,7 @@
   <div class="ticker bottom"></div>
 </section>
 
-<!-- 05 · CTA -->
+<!-- 06 · CTA -->
 <section class="slide backdrop cta has-ticker-bottom">
   <div class="meta tl" style="color:var(--paper)">GMSR Maison</div>
   <div class="meta tr counter" style="color:var(--paper)"></div>

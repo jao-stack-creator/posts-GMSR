@@ -1,25 +1,32 @@
-# Post 01 · Sobre a marca
+# Versão 1 · Post 01 · A marca e o dono
 
-**Formato:** carrossel, 5 slides (1080×1350)
-**Imagens:** `png/slide-01.png` … `png/slide-05.png`
-**Sugestão:** fixar no topo do perfil.
+**Formato:** carrossel, 6 slides (1080×1350)
+**Imagens:** `png/slide-01.png` … `png/slide-06.png`
 
 ---
 
 ## Legenda
 
-Luxo não é o que vendemos. É o que você se torna. ◆
+Por que escolher a GMSR? ◆
 
-A GMSR Maison nasceu para quem sabe a diferença que um detalhe faz. Não trabalhamos com volume, trabalhamos com critério. Cada peça é escolhida a dedo e passa pela nossa curadoria antes de chegar até você: tecido, acabamento, detalhes e caimento.
+Hoje, qualquer perfil diz que vende "grife". Poucos conseguem mostrar a procedência de cada peça.
 
-Exclusividade, critério e atendimento. Três coisas que não negociamos.
+Na GMSR é diferente:
+◆ 100% original, sem exceção
+◆ Tags e etiquetas originais
+◆ Embalagem da marca, quando acompanha a peça
+◆ Fotos reais de cada peça, no nosso fundo azul
+◆ Atendimento de pessoa para pessoa, do primeiro "oi" até a entrega
 
-Bem-vindo à maison. 🤍
+Você não compra no escuro. O que você vê é o que você recebe.
 
-📩 Fale com a gente pelo Direct
-🔔 Ative as notificações para ver as novidades primeiro
+E por trás de cada peça existe alguém que escolhe uma a uma: arraste e conheça quem é o dono da GMSR.
+
+Ou é original, ou não é GMSR.
+
+📩 Chame no Direct: @gmsr_maison
 
 .
 .
 .
-#gmsrmaison #boutique #modamasculina #pecasexclusivas #streetwearbrasil #luxurystyle #curadoria #outfitmasculino #estilomasculino #grifes
+#gmsrmaison #100original #boutique #modamasculina #pecasoriginais #luxurystyle #curadoria #grifes #estilomasculino

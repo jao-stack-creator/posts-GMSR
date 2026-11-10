@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>GMSR — Versão 3 · Post 02 · Encomenda e envio</title>
+<link rel="stylesheet" href="../../shared/gmsr-v3.css">
+<style>
+  .chat{position:absolute;right:70px;top:540px;width:500px;background:#0E141E;border:1px solid rgba(243,240,233,.14);padding:24px;z-index:5;display:flex;flex-direction:column;gap:16px}
+  .chat .media{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .chat .media div{position:relative;aspect-ratio:1/1.2;overflow:hidden;border-radius:10px}
+  .chat .media img{width:100%;height:100%;object-fit:cover;display:block}
+  .chat .play{position:absolute;inset:0;display:grid;place-items:center}
+  .chat .play i{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.88);display:grid;place-items:center;font-style:normal;color:#111;font-size:26px;padding-left:5px}
+  .chat .dur{position:absolute;left:8px;bottom:8px;font-family:Mono;font-size:14px;color:#fff;background:rgba(0,0,0,.55);padding:2px 6px;border-radius:6px}
+  .chat .msg{background:#3E8FCB;color:#fff;font-family:Inter;font-size:22px;line-height:1.35;padding:14px 18px;border-radius:16px 16px 4px 16px;align-self:flex-end}
+  .chat .ok{background:rgba(243,240,233,.1);font-family:Inter;font-size:22px;padding:12px 18px;border-radius:16px 16px 16px 4px;align-self:flex-start}
+  .map3{position:absolute;left:250px;top:300px;width:760px;height:760px;z-index:3}
+  .map3 .mapa{width:100%;height:100%}
+</style>
+</head>
+<body>
+
+<!-- 01 · CAPA -->
+<section class="slide n3">
+  <div class="bar"><b>GMSR · MAISON</b><span class="counter"></span></div>
+  <div class="tiles" style="top:150px;height:640px;grid-template-columns:1fr 1fr 1fr">
+    <figure class="tile"><img src="../../assets/fotos/zegna.jpg" alt=""></figure>
+    <figure class="tile"><img src="../../assets/fotos/moncler-jacket.jpg" alt=""></figure>
+    <figure class="tile"><img src="../../assets/fotos/loro-piana.jpg" alt=""></figure>
+  </div>
+  <div class="txt" style="top:850px">
+    <div class="kick">◆ Encomendas</div>
+    <div class="w" style="font-weight:600;font-size:76px;margin-top:20px;line-height:1.05">Como funciona<br>a sua <em>encomenda.</em></div>
+    <p class="p" style="margin-top:26px">Você pede. A gente busca, confere e mostra.</p>
+  </div>
+  <div class="base"><span>Só enviamos com a sua aprovação</span><span>Deslize →</span></div>
+</section>
+
+<!-- 02 · O PROCESSO -->
+<section class="slide n3">
+  <div class="bar"><b>GMSR · MAISON</b><span class="counter"></span></div>
+  <div class="txt" style="top:180px">
+    <div class="kick">◆ O processo</div>
+    <div class="w" style="font-weight:600;font-size:72px;margin-top:22px">Em 5 etapas.</div>
+    <div class="rows" style="margin-top:46px">
+      <div class="row"><span class="num">01</span><div><h3>Referência</h3><p>Você manda a foto ou o nome da peça no Direct.</p></div></div>
+      <div class="row"><span class="num">02</span><div><h3>Busca</h3><p>A gente encontra a peça original com a nossa curadoria.</p></div></div>
+      <div class="row"><span class="num">03</span><div><h3>Conferência</h3><p>Conferimos tags, etiquetas e acabamento.</p></div></div>
+      <div class="row"><span class="num">04</span><div><h3>Aprovação</h3><p>Você recebe fotos e vídeos reais para aprovar.</p></div></div>
+      <div class="row"><span class="num">05</span><div><h3>Envio</h3><p>Aprovou? Enviamos com código de rastreio.</p></div></div>
+    </div>
+  </div>
+  <div class="base"><span>Você acompanha cada etapa</span><span>Deslize →</span></div>
+</section>
+
+<!-- 03 · APROVAÇÃO -->
+<section class="slide n3">
+  <div class="bar"><b>GMSR · MAISON</b><span class="counter"></span></div>
+  <div class="txt" style="top:200px">
+    <div class="kick">◆ A aprovação</div>
+    <div class="w" style="font-weight:600;font-size:72px;margin-top:22px;line-height:1.05">Você vê<br><em>antes de receber.</em></div>
+  </div>
+  <div class="txt" style="top:560px;right:auto;width:400px">
+    <p class="p">Depois da conferência, mandamos <b>fotos e vídeos reais</b> da sua peça.</p>
+    <p class="p" style="margin-top:36px">Nada é enviado <b>sem a sua aprovação.</b></p>
+  </div>
+  <div class="chat">
+    <div class="media">
+      <div><img src="../../assets/fotos/zegna.jpg" alt=""></div>
+      <div><img src="../../assets/fotos/zegna.jpg" style="object-position:30% 60%;transform:scale(1.4)" alt=""><span class="play"><i>▶</i></span><span class="dur">0:18</span></div>
+    </div>
+    <div class="msg">Sua peça chegou! Seguem as fotos e o vídeo para você conferir antes do envio. ◆</div>
+    <div class="ok">Perfeito, pode enviar! 🙌</div>
+  </div>
+  <div class="base"><span>Fotos reais · vídeos reais</span><span>Deslize →</span></div>
+</section>
+
+<!-- 04 · ENVIO -->
+<section class="slide n3">
+  <div class="bar"><b>GMSR · MAISON</b><span class="counter"></span></div>
+  <div class="txt" style="top:180px">
+    <div class="kick">◆ O envio</div>
+    <div class="w" style="font-weight:600;font-size:72px;margin-top:22px">Todo o <em>Brasil.</em></div>
+  </div>
+  <div class="map3"><div class="mapa" data-cores="#F3F0E9,#D9E8F4,#8CC8EE,#BFDDF2" data-fundo="#050608" data-label="#050608"></div></div>
+  <div class="txt" style="top:1080px">
+    <p class="p">27 estados, do Oiapoque ao Chuí. <b>Embalada com cuidado e com código de rastreio.</b></p>
+  </div>
+  <div class="base"><span>Não importa a distância</span><span>Deslize →</span></div>
+</section>
+
+<!-- 05 · FINAL -->
+<section class="slide n3">
+  <div class="bg"><img src="../../assets/fotos/acervo-mesa.jpg" style="object-position:50% 60%;filter:brightness(1.2)" alt=""></div>
+  <div class="bar"><b>GMSR · MAISON</b><span class="counter"></span></div>
+  <div class="txt" style="top:880px">
+    <div class="kick">◆ Encomende a sua</div>
+    <div class="w" style="font-weight:600;font-size:74px;margin-top:20px;line-height:1.05">Mande a referência<br>no <em>Direct.</em></div>
+    <p class="p" style="margin-top:22px">@gmsr_maison · ou é original, ou não é GMSR.</p>
+  </div>
+  <div class="base"><span>Envio para todo o Brasil</span><span><em>It's what you become</em></span></div>
+</section>
+
+<script src="../../assets/mapa-brasil.js"></script>
+<script src="../../shared/gmsr.js"></script>
+<script src="../../shared/mapa.js"></script>
+</body>
+</html>

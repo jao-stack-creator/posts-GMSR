@@ -12,7 +12,7 @@ const filter = process.argv[2] || '';
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 1500 }, deviceScaleFactor: 1 });
 
-const all = ['posts', 'posts-v2', 'posts-extra', 'posts-grade'].filter(b => existsSync(join(root, b)))
+const all = ['posts', 'posts-v2', 'posts-v3', 'posts-extra', 'posts-grade'].filter(b => existsSync(join(root, b)))
   .flatMap(b => readdirSync(join(root, b)).sort().map(d => join(b, d)));
 for (const dir of all.filter(d => d.includes(filter))) {
   const html = join(root, dir, 'slides.html');

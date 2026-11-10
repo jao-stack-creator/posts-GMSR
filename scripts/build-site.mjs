@@ -6,29 +6,21 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const versions = [
-  { id: 'aprovados', name: 'Aprovados pelo cliente', items: [
-    { base: 'posts-v2', dir: '01-sobre-a-marca', title: 'Por que escolher a GMSR' },
-    { base: 'posts-v2', dir: '02-envio-todo-brasil', title: 'Como funciona a sua encomenda' },
-    { base: 'posts-extra', dir: '01-mapa-azul', title: 'Mapa do Brasil · imagem única' },
-    { base: 'posts-grade', dir: '01-grade-loja', title: 'Grade · Quem é o dono', ratio: '3/4' },
+  { id: 'v1', name: 'Versão 1', items: [
+    { base: 'posts', dir: '01-sobre-a-marca', title: 'A marca e o dono' },
+    { base: 'posts', dir: '02-envio-todo-brasil', title: 'Encomenda e envio' },
+    { base: 'posts', dir: '03-produtos', title: 'O acervo' },
   ] },
-  { id: 'v1', name: 'Versão 1', base: 'posts', titles: {
-    '01-sobre-a-marca': 'Sobre a marca',
-    '02-envio-todo-brasil': 'Envio para todo o Brasil',
-    '03-produtos': 'Produtos e grifes',
-  } },
-  { id: 'v2', name: 'Versão 2', base: 'posts-v2', titles: {
-    '01-sobre-a-marca': 'Por que escolher a GMSR',
-    '02-envio-todo-brasil': 'Como funciona a sua encomenda',
-    '03-produtos': 'O acervo',
-  } },
-  { id: 'mapa', name: 'Post único · Mapa', base: 'posts-extra', titles: {
-    '01-mapa-azul': 'Mapa do Brasil · azul GMSR',
-    '02-mapa-roxo': 'Mapa do Brasil · roxo',
-  } },
-  { id: 'grade', name: 'Grade · 3 posts', base: 'posts-grade', ratio: '3/4', titles: {
-    '01-grade-loja': 'A loja · Quem é o dono · Envio com mapa',
-  } },
+  { id: 'v2', name: 'Versão 2', items: [
+    { base: 'posts-v2', dir: '01-sobre-a-marca', title: 'A marca e o dono' },
+    { base: 'posts-v2', dir: '02-envio-todo-brasil', title: 'Encomenda e envio' },
+    { base: 'posts-v2', dir: '03-produtos', title: 'O acervo' },
+  ] },
+  { id: 'v3', name: 'Versão 3', items: [
+    { base: 'posts-v3', dir: '01-marca', title: 'A marca e o dono' },
+    { base: 'posts-v3', dir: '02-encomenda', title: 'Encomenda e envio' },
+    { base: 'posts-v3', dir: '03-acervo', title: 'O acervo' },
+  ] },
 ];
 
 function load(base, dir, i, title, ratio) {

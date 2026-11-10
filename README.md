@@ -10,45 +10,21 @@ Página para mostrar os posts ao cliente: **https://jao-stack-creator.github.io/
 
 O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site` (ou `npm run render`, que já faz os dois) para atualizar a lista de slides e as legendas.
 
-## Aprovados pelo cliente
+## Posts
 
-No site, a primeira aba ("Aprovados pelo cliente") reúne a seleção final: Post 1 e Post 2 da versão 2, o mapa azul e a grade "Quem é o dono". A lista fica em `scripts/build-site.mjs`.
+São **3 posts** (A marca e o dono · Encomenda e envio · O acervo), cada um com pelo menos 5 slides, em **3 versões** de visual. No site, escolha a versão e depois o post.
 
-## Posts prontos
+| Versão | Visual | Post 1 · A marca e o dono | Post 2 · Encomenda e envio | Post 3 · O acervo |
+|---|---|---|---|---|
+| 1 | Azul GMSR, tipografia condensada | [`posts/01-sobre-a-marca`](posts/01-sobre-a-marca) (6) | [`posts/02-envio-todo-brasil`](posts/02-envio-todo-brasil) (5) | [`posts/03-produtos`](posts/03-produtos) (7) |
+| 2 | Editorial escuro com polaroids | [`posts-v2/01-sobre-a-marca`](posts-v2/01-sobre-a-marca) (6) | [`posts-v2/02-envio-todo-brasil`](posts-v2/02-envio-todo-brasil) (6) | [`posts-v2/03-produtos`](posts-v2/03-produtos) (5) |
+| 3 | Noir, fonte larga e fotos grandes | [`posts-v3/01-marca`](posts-v3/01-marca) (5) | [`posts-v3/02-encomenda`](posts-v3/02-encomenda) (5) | [`posts-v3/03-acervo`](posts-v3/03-acervo) (5) |
 
-**Versão 1** (identidade azul, tipografia condensada):
+Cada pasta tem `png/` (imagens prontas, em ordem), `legenda.md` e `slides.html` (fonte editável).
 
-| # | Post | Slides | Pasta |
-|---|------|--------|-------|
-| 01 | Sobre a marca | 5 | [`posts/01-sobre-a-marca`](posts/01-sobre-a-marca) |
-| 02 | Envio para todo o Brasil | 4 | [`posts/02-envio-todo-brasil`](posts/02-envio-todo-brasil) |
-| 03 | Nossos produtos e grifes | 7 | [`posts/03-produtos`](posts/03-produtos) |
+Fotos em `assets/fotos/` (peças, `dono.jpg` e `acervo-mesa.jpg`). O mapa (Natural Earth, domínio público) fica em `assets/mapa-brasil.js`.
 
-**Versão 2** (editorial escuro, com fotos reais do acervo em polaroids; inspirada no formato de processo numerado):
-
-| # | Post | Slides | Pasta |
-|---|------|--------|-------|
-| 01 | Por que escolher a GMSR | 5 | [`posts-v2/01-sobre-a-marca`](posts-v2/01-sobre-a-marca) |
-| 02 | Como funciona a sua encomenda | 6 | [`posts-v2/02-envio-todo-brasil`](posts-v2/02-envio-todo-brasil) |
-| 03 | O acervo | 5 | [`posts-v2/03-produtos`](posts-v2/03-produtos) |
-
-**Post único · Mapa** (imagem única sobre o envio, em duas cores):
-
-| # | Post | Pasta |
-|---|------|-------|
-| 01 | Mapa do Brasil · azul GMSR | [`posts-extra/01-mapa-azul`](posts-extra/01-mapa-azul) |
-| 02 | Mapa do Brasil · roxo | [`posts-extra/02-mapa-roxo`](posts-extra/02-mapa-roxo) |
-
-O mapa (27 estados) vem do Natural Earth, que é domínio público, e fica em `assets/mapa-brasil.js`.
-
-**Grade · 3 posts** (três posts de 1080×1440 que, lado a lado no perfil, formam uma arte só): [`posts-grade/01-grade-loja`](posts-grade/01-grade-loja). A ordem de postagem está no `legenda.md`. Para gerar a prévia lado a lado, rode `python3 scripts/preview-grade.py` depois do render.
-
-As fotos da versão 2 ficam em `assets/fotos/`. Elas foram recortadas dos prints do feed; se tiverem as fotos originais em alta, substituam mantendo os mesmos nomes e rodem `npm run render`. O estilo da versão 2 está em `shared/gmsr-v2.css`.
-
-Cada pasta tem:
-- `png/`: as imagens finais em 1080×1350 (4:5), prontas para postar em ordem
-- `legenda.md`: a legenda com hashtags
-- `slides.html`: o arquivo-fonte, para editar textos e cores
+Rascunhos que saíram do site, mas continuam no repositório: `posts-extra/` (mapa em imagem única) e `posts-grade/` (grade de 3 posts "Quem é o dono").
 
 ## Identidade visual
 
@@ -80,7 +56,7 @@ O layout se inspira na estrutura do perfil de referência: faixa repetida com o 
 npm install
 npx playwright install chromium
 npm run render          # todos os posts
-npm run render -- v2/02 # só o post 02 da versão 2
+npm run render -- v3/02 # só o post 02 da versão 3
 ```
 
 ## Criar um post novo

@@ -46,6 +46,13 @@
   .brands.world .b .where{font-size:17px;margin-top:2px}
   .brands.world .b .item{font-size:20px;margin-top:2px}
   .brands.world .b .year{font-size:62px}
+  .brands .b>div:not(.year){flex:1}
+  .brands .b img.th{width:110px;height:110px;object-fit:cover;border:4px solid var(--paper);flex:none}
+  .brands.world .b img.th{width:70px;height:70px;border-width:3px}
+  .cover .icons img{width:150px;height:150px;object-fit:cover;border:6px solid var(--paper);box-shadow:0 14px 30px rgba(8,20,40,.35)}
+  .cover .icons img:nth-child(odd){transform:rotate(-4deg)}.cover .icons img:nth-child(even){transform:rotate(4deg)}
+  .real .frame{gap:18px;padding:0 24px;grid-template-columns:repeat(3,1fr);display:grid;align-items:center}
+  .real .frame img{width:100%;aspect-ratio:1/1.1;object-fit:cover;border:5px solid var(--paper)}
   .brands .flag{font-family:Mono;font-size:18px;letter-spacing:.1em;color:rgba(243,240,233,.5);margin-top:18px}
 
   .real h1{font-size:150px;margin-top:20px}
@@ -97,12 +104,7 @@
     <h1 class="display">O que você<br>encontra<br>na maison.</h1>
     <h2 class="serif">peças que falam por você.</h2>
     <div class="icons">
-      <svg class="ic" viewBox="0 0 100 100"><use href="#i-tee"/></svg>
-      <svg class="ic" viewBox="0 0 100 100"><use href="#i-knit"/></svg>
-      <svg class="ic" viewBox="0 0 100 100"><use href="#i-polo"/></svg>
-      <svg class="ic" viewBox="0 0 100 100"><use href="#i-jacket"/></svg>
-      <svg class="ic" viewBox="0 0 100 100"><use href="#i-shoe"/></svg>
-      <svg class="ic" viewBox="0 0 100 100"><use href="#i-bag"/></svg>
+      <img src="../../assets/fotos/margiela.jpg" alt=""><img src="../../assets/fotos/saint-laurent.jpg" alt=""><img src="../../assets/fotos/zegna.jpg" alt=""><img src="../../assets/fotos/moncler-jacket.jpg" alt=""><img src="../../assets/fotos/louis-vuitton.jpg" alt="">
     </div>
     <div class="swipe">Confira ao lado
       <svg viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M0 12 H60 M48 2 L60 12 L48 22"/></svg>
@@ -140,10 +142,10 @@
     <p class="small accent" style="margin-top:20px">◆ As grifes da maison · França</p>
     <h1 class="display">Direto de<br><span class="serif accent">Paris.</span></h1>
     <div class="list">
-      <div class="b"><div><div class="name">Louis Vuitton</div><div class="where">Paris · França</div><div class="item">No acervo: carteira Damier</div></div><div class="year">1854</div></div>
-      <div class="b"><div><div class="name">Saint Laurent</div><div class="where">Paris · França</div><div class="item">No acervo: tricô com assinatura</div></div><div class="year">1961</div></div>
-      <div class="b"><div><div class="name">Maison Margiela</div><div class="where">Paris · França</div><div class="item">No acervo: camiseta Numbers</div></div><div class="year">1988</div></div>
-      <div class="b"><div><div class="name">AMI Paris</div><div class="where">Paris · França</div><div class="item">No acervo: camiseta Ami de Coeur</div></div><div class="year">2011</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/louis-vuitton.jpg" alt=""><div><div class="name">Louis Vuitton</div><div class="where">Paris · França</div><div class="item">No acervo: carteira Damier</div></div><div class="year">1854</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/saint-laurent.jpg" alt=""><div><div class="name">Saint Laurent</div><div class="where">Paris · França</div><div class="item">No acervo: tricô com assinatura</div></div><div class="year">1961</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/margiela.jpg" alt=""><div><div class="name">Maison Margiela</div><div class="where">Paris · França</div><div class="item">No acervo: camiseta Numbers</div></div><div class="year">1988</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/ami.jpg" alt=""><div><div class="name">AMI Paris</div><div class="where">Paris · França</div><div class="item">No acervo: camiseta Ami de Coeur</div></div><div class="year">2011</div></div>
     </div>
   </div>
   <div class="ticker bottom"></div>
@@ -158,13 +160,13 @@
     <p class="small accent" style="margin-top:20px">◆ As grifes da maison · Mundo</p>
     <h1 class="display" style="font-size:104px">De Milão <span class="serif accent">a Tóquio.</span></h1>
     <div class="list">
-      <div class="b"><div><div class="name">Zegna</div><div class="where">Trivero · Itália</div><div class="item">Tênis Triple Stitch</div></div><div class="year">1910</div></div>
-      <div class="b"><div><div class="name">Loro Piana</div><div class="where">Quarona · Itália</div><div class="item">Boné</div></div><div class="year">1924</div></div>
-      <div class="b"><div><div class="name">Moncler</div><div class="where">Nasceu na França · hoje em Milão</div><div class="item">Camiseta e jaqueta em tricô com nylon</div></div><div class="year">1952</div></div>
-      <div class="b"><div><div class="name">Ralph Lauren</div><div class="where">Nova York · EUA</div><div class="item">Polo RLX Polo Bear</div></div><div class="year">1967</div></div>
-      <div class="b"><div><div class="name">Comme des Garçons Play</div><div class="where">Tóquio · Japão</div><div class="item">Camiseta Double Heart</div></div><div class="year">2002</div></div>
-      <div class="b"><div><div class="name">Amiri</div><div class="where">Los Angeles · EUA</div><div class="item">Camiseta Arts &amp; Crafts</div></div><div class="year">2014</div></div>
-      <div class="b"><div><div class="name">Nude Project</div><div class="where">Barcelona · Espanha</div><div class="item">Camiseta</div></div><div class="year">2019</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/zegna.jpg" alt=""><div><div class="name">Zegna</div><div class="where">Trivero · Itália</div><div class="item">Tênis Triple Stitch</div></div><div class="year">1910</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/loro-piana.jpg" alt=""><div><div class="name">Loro Piana</div><div class="where">Quarona · Itália</div><div class="item">Boné</div></div><div class="year">1924</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/moncler-jacket.jpg" alt=""><div><div class="name">Moncler</div><div class="where">Nasceu na França · hoje em Milão</div><div class="item">Camiseta e jaqueta em tricô com nylon</div></div><div class="year">1952</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/rlx-polo.jpg" alt=""><div><div class="name">Ralph Lauren</div><div class="where">Nova York · EUA</div><div class="item">Polo RLX Polo Bear</div></div><div class="year">1967</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/cdg-play.jpg" alt=""><div><div class="name">Comme des Garçons Play</div><div class="where">Tóquio · Japão</div><div class="item">Camiseta Double Heart</div></div><div class="year">2002</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/amiri.jpg" alt=""><div><div class="name">Amiri</div><div class="where">Los Angeles · EUA</div><div class="item">Camiseta Arts &amp; Crafts</div></div><div class="year">2014</div></div>
+      <div class="b"><img class="th" src="../../assets/fotos/nude-project.jpg" alt=""><div><div class="name">Nude Project</div><div class="where">Barcelona · Espanha</div><div class="item">Camiseta</div></div><div class="year">2019</div></div>
     </div>
   </div>
   <div class="ticker bottom"></div>
@@ -179,8 +181,7 @@
     <p class="small accent" style="margin-top:20px">◆ O que você vê é o que você recebe</p>
     <h1 class="display">Foto real,<br><span class="hl">sempre.</span></h1>
     <div class="frame">
-      <svg class="ic" viewBox="0 0 100 100"><use href="#i-tee"/></svg>
-      <span class="tag">◆ Fundo azul GMSR · foto da própria peça</span>
+      <img src="../../assets/fotos/amiri.jpg" alt=""><img src="../../assets/fotos/rlx-polo.jpg" alt=""><img src="../../assets/fotos/cdg-play.jpg" alt="">
     </div>
     <div class="pts">
       <div class="pt"><span class="diamond fill"></span><div><b>A própria peça</b>Fotografada por nós, no nosso fundo azul.</div></div>

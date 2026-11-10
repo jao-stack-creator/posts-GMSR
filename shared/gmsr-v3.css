@@ -1,0 +1,42 @@
+/* ==========================================================
+   GMSR Maison — VERSÃO 3 (noir: preto, fonte larga, fotos grandes)
+   ========================================================== */
+@import url(gmsr.css);
+@font-face{font-family:Wide;src:url(../assets/fonts/archivo-latin-wdth-normal.woff2);font-weight:100 900;font-stretch:62% 125%}
+
+.n3{background:#050608;color:var(--paper)}
+.n3 .w{font-family:Wide;font-stretch:125%;text-transform:uppercase;line-height:1}
+.n3 .w em{font-style:normal;color:var(--sky)}
+.n3 .bar{position:absolute;left:70px;right:70px;top:64px;display:flex;justify-content:space-between;align-items:center;z-index:8}
+.n3 .bar b{font-family:Wide;font-stretch:125%;font-weight:600;font-size:22px;letter-spacing:.32em}
+.n3 .bar span{font-family:Mono;font-size:18px;letter-spacing:.14em;color:rgba(243,240,233,.55)}
+.n3 .base{position:absolute;left:70px;right:70px;bottom:56px;display:flex;justify-content:space-between;z-index:8;
+  font-family:Mono;font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,240,233,.5)}
+.n3 .base em{font-style:normal;color:var(--sky)}
+
+/* foto que ocupa o slide inteiro */
+.n3 .bg{position:absolute;inset:0;z-index:0}
+.n3 .bg img{width:100%;height:100%;object-fit:cover;display:block}
+.n3 .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,8,.65) 0%,rgba(5,6,8,.1) 25%,rgba(5,6,8,.15) 55%,rgba(5,6,8,.96) 88%)}
+
+.n3 .txt{position:absolute;left:70px;right:70px;z-index:6}
+.n3 .kick{font-family:Mono;font-size:20px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky)}
+.n3 .p{font-family:Inter;font-size:29px;line-height:1.45;color:rgba(243,240,233,.82)}
+.n3 .p b{color:var(--paper);font-weight:600}
+.n3 .line{height:1px;background:rgba(243,240,233,.2)}
+
+/* blocos de foto com legenda */
+.n3 .tiles{position:absolute;left:70px;right:70px;display:grid;gap:18px;z-index:5}
+.n3 .tile{position:relative;overflow:hidden;background:#0d1320}
+.n3 .tile img{width:100%;height:100%;object-fit:cover;display:block}
+.n3 .tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(transparent,rgba(5,6,8,.9));
+  font-family:Wide;font-stretch:115%;font-weight:600;font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+.n3 .tile figcaption small{display:block;font-family:Mono;font-weight:400;font-size:15px;letter-spacing:.12em;color:rgba(243,240,233,.65);margin-top:4px}
+
+/* linhas numeradas */
+.n3 .rows{display:flex;flex-direction:column}
+.n3 .row{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:26px 0;border-top:1px solid rgba(243,240,233,.16)}
+.n3 .row:last-child{border-bottom:1px solid rgba(243,240,233,.16)}
+.n3 .row .num{font-family:Wide;font-stretch:125%;font-weight:700;font-size:54px;color:var(--sky)}
+.n3 .row h3{font-family:Wide;font-stretch:125%;font-weight:600;font-size:36px;text-transform:uppercase}
+.n3 .row p{font-family:Inter;font-size:25px;color:rgba(243,240,233,.7);margin-top:6px}

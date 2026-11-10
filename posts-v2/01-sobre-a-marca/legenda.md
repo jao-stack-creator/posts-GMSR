@@ -1,7 +1,7 @@
-# Versão 2 · Post 01 · Por que escolher a GMSR?
+# Versão 2 · Post 01 · A marca e o dono
 
-**Formato:** carrossel, 5 slides (1080×1350)
-**Imagens:** `png/slide-01.png` … `png/slide-05.png`
+**Formato:** carrossel, 6 slides (1080×1350)
+**Imagens:** `png/slide-01.png` … `png/slide-06.png`
 
 ---
 
@@ -19,6 +19,8 @@ Na GMSR é diferente:
 ◆ Atendimento de pessoa para pessoa, do primeiro "oi" até a entrega
 
 Você não compra no escuro. O que você vê é o que você recebe.
+
+E por trás de cada peça existe alguém que escolhe uma a uma: arraste e conheça quem é o dono da GMSR.
 
 Ou é original, ou não é GMSR.
 
