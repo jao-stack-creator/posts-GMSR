@@ -134,9 +134,7 @@
     <p class="meta" id="info"></p>
     <div class="thumbs" id="thumbs"></div>
     <div class="actions">
-      <button class="btn solid" id="dl">Baixar slide</button>
-      <button class="btn" id="dlall">Baixar todos</button>
-      <button class="btn" id="copy">Copiar legenda</button>
+      <button class="btn solid" id="copy">Copiar legenda</button>
     </div>
   </section>
 </main>
@@ -193,9 +191,6 @@ $('stage').addEventListener('pointerup', e => {
 });
 
 function toast(t) { $('toast').textContent = t; $('toast').classList.add('show'); setTimeout(() => $('toast').classList.remove('show'), 1800); }
-function download(src, name) { const a = document.createElement('a'); a.href = src; a.download = name; document.body.append(a); a.click(); a.remove(); }
-$('dl').onclick = () => { const x = posts[p]; download(x.slides[s], `gmsr-post${x.n}-slide${s + 1}.png`); };
-$('dlall').onclick = () => { const x = posts[p]; x.slides.forEach((src, j) => setTimeout(() => download(src, `gmsr-post${x.n}-slide${j + 1}.png`), j * 400)); };
 $('copy').onclick = async () => {
   const t = posts[p].caption.replace(/\*/g, '');
   try { await navigator.clipboard.writeText(t); toast('Legenda copiada'); }
