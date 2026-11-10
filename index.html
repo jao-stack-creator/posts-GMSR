@@ -156,7 +156,7 @@
 <script>
 const $ = id => document.getElementById(id);
 const versions = window.VERSIONS;
-const vdesc = { v1: 'Identidade azul, tipografia condensada', v2: 'Editorial escuro, com fotos reais do acervo' };
+const vdesc = { v1: 'Identidade azul, tipografia condensada', v2: 'Editorial escuro, com fotos reais do acervo', mapa: 'Imagem única sobre o envio: duas opções de cor' };
 let v = 0, posts = versions[0].posts, p = 0, s = 0;
 
 $('tk').innerHTML = Array(2).fill(Array(12).fill('<span>GMSR MAISON</span><i>◆</i>').join('')).join('');
@@ -182,7 +182,7 @@ function openPost(i) {
   $('dots').innerHTML = x.slides.map(() => '<i></i>').join('');
   $('thumbs').innerHTML = x.slides.map((src, j) => `<button data-j="${j}"><img src="${src}" alt="" loading="lazy"></button>`).join('');
   $('title').innerHTML = `Post ${x.n}<em>${x.title}</em>`;
-  $('info').textContent = `Carrossel · ${x.slides.length} slides · 1080 × 1350`;
+  $('info').textContent = x.slides.length > 1 ? `Carrossel · ${x.slides.length} slides · 1080 × 1350` : 'Imagem única · 1080 × 1350';
   $('cap').innerHTML = '<b>gmsr_maison</b> ' + x.caption.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\*/g, '');
   $('cap').classList.add('clamp'); $('more').hidden = false;
   go(0);
@@ -216,7 +216,7 @@ $('copy').onclick = async () => {
   catch { const ta = document.createElement('textarea'); ta.value = t; document.body.append(ta); ta.select(); document.execCommand('copy'); ta.remove(); toast('Legenda copiada'); }
 };
 
-const m = location.hash.match(/(?:(v\d)-)?post-(\d+)/);
+const m = location.hash.match(/(?:(\w+)-)?post-(\d+)/);
 const vi = m && m[1] ? Math.max(0, versions.findIndex(x => x.id === m[1])) : 0;
 openVersion(vi, m ? Math.max(0, versions[vi].posts.findIndex(x => x.n === +m[2])) : 0);
 </script>

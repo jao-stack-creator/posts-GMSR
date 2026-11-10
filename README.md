@@ -28,6 +28,15 @@ O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site
 | 02 | Da maison para a sua porta | 5 | [`posts-v2/02-envio-todo-brasil`](posts-v2/02-envio-todo-brasil) |
 | 03 | O acervo | 5 | [`posts-v2/03-produtos`](posts-v2/03-produtos) |
 
+**Post único · Mapa** (imagem única sobre o envio, em duas cores):
+
+| # | Post | Pasta |
+|---|------|-------|
+| 01 | Mapa do Brasil · azul GMSR | [`posts-extra/01-mapa-azul`](posts-extra/01-mapa-azul) |
+| 02 | Mapa do Brasil · roxo | [`posts-extra/02-mapa-roxo`](posts-extra/02-mapa-roxo) |
+
+O mapa (27 estados) vem do Natural Earth, que é domínio público, e fica em `assets/mapa-brasil.js`.
+
 As fotos da versão 2 ficam em `assets/fotos/`. Elas foram recortadas dos prints do feed; se tiverem as fotos originais em alta, substituam mantendo os mesmos nomes e rodem `npm run render`. O estilo da versão 2 está em `shared/gmsr-v2.css`.
 
 Cada pasta tem:

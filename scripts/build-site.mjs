@@ -16,6 +16,10 @@ const versions = [
     '02-envio-todo-brasil': 'Da maison para a sua porta',
     '03-produtos': 'O acervo',
   } },
+  { id: 'mapa', name: 'Post único · Mapa', base: 'posts-extra', titles: {
+    '01-mapa-azul': 'Mapa do Brasil · azul GMSR',
+    '02-mapa-roxo': 'Mapa do Brasil · roxo',
+  } },
 ];
 
 const out = versions.filter(v => existsSync(join(root, v.base))).map(v => ({

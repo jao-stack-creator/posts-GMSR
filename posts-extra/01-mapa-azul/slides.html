@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>GMSR — Post único · Mapa do Brasil (azul GMSR)</title>
+<link rel="stylesheet" href="../../shared/gmsr-v2.css">
+<style>
+  .mapwrap{position:absolute;left:150px;top:215px;width:780px;height:780px;z-index:3}
+  .mapa{width:100%;height:100%;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
+  .toplogo{position:absolute;left:50%;top:120px;transform:translateX(-50%);width:190px;z-index:6;filter:drop-shadow(0 10px 30px rgba(0,0,0,.6))}
+  .headline{position:absolute;left:84px;top:1015px;text-align:left;z-index:6;font-size:74px;line-height:1;text-shadow:0 8px 30px rgba(0,0,0,.55)}
+  .side{position:absolute;left:84px;top:790px;width:330px;z-index:6;font-family:Inter;font-weight:400;font-size:24px;line-height:1.35;color:#8CC8EE}
+  .side b{font-weight:800}
+  .ring{position:absolute;left:50%;top:600px;width:1000px;height:1000px;transform:translate(-50%,-50%);border-radius:50%;
+    background:radial-gradient(circle,rgba(62,143,203,.28) 0%,transparent 60%);z-index:2}
+</style>
+</head>
+<body>
+<section class="slide v2">
+  <div class="frame"></div>
+  <div class="ring"></div>
+  <div class="pg">@GMSR_MAISON</div>
+  <div class="note" style="position:absolute;left:84px;top:84px;z-index:6;color:#8CC8EE">◆ Envio para todo o Brasil</div>
+  <img class="toplogo" src="../../assets/logo/gmsr-mono-branco.png" alt="GMSR">
+  <div class="mapwrap"><div class="mapa" data-cores="#8CC8EE,#5FA8DF,#A9D6F3,#3E8FCB" data-label="#07090D"></div></div>
+  <p class="side"><b>Não importa a distância:</b> sua peça original chega com segurança, cuidado e código de rastreio.</p>
+  <h1 class="headline">Enviamos para<br>todo o <span style="color:#8CC8EE">Brasil.</span></h1>
+  <div class="coords">27 ESTADOS · DO OIAPOQUE AO CHUÍ</div>
+  <div class="swipe2">PEÇA PELO DIRECT</div>
+  <div class="foot">Ou é original, <em style="color:#8CC8EE">ou não é GMSR.</em></div>
+</section>
+<script src="../../assets/mapa-brasil.js"></script>
+<script src="../../shared/mapa.js"></script>
+</body>
+</html>

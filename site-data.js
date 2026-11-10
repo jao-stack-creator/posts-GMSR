@@ -90,5 +90,29 @@ window.VERSIONS = [
         ]
       }
     ]
+  },
+  {
+    "id": "mapa",
+    "name": "Post único · Mapa",
+    "posts": [
+      {
+        "n": 1,
+        "dir": "01-mapa-azul",
+        "title": "Mapa do Brasil · azul GMSR",
+        "caption": "Do Oiapoque ao Chuí: a GMSR chega até você. 🇧🇷\n\nNão importa a distância: sua peça original chega com segurança, cuidado e código de rastreio, em qualquer um dos 27 estados do Brasil.\n\n📦 Veja as entregas no destaque *Encomendas*\n📩 Peça pelo Direct: @gmsr_maison\n\nOu é original, ou não é GMSR. ◆\n\n.\n.\n.\n#gmsrmaison #enviamosparatodoobrasil #100original #boutique #modamasculina #pecasoriginais",
+        "slides": [
+          "posts-extra/01-mapa-azul/png/slide-01.png"
+        ]
+      },
+      {
+        "n": 2,
+        "dir": "02-mapa-roxo",
+        "title": "Mapa do Brasil · roxo",
+        "caption": "Do Oiapoque ao Chuí: a GMSR chega até você. 🇧🇷\n\nNão importa a distância: sua peça original chega com segurança, cuidado e código de rastreio, em qualquer um dos 27 estados do Brasil.\n\n📦 Veja as entregas no destaque *Encomendas*\n📩 Peça pelo Direct: @gmsr_maison\n\nOu é original, ou não é GMSR. ◆\n\n.\n.\n.\n#gmsrmaison #enviamosparatodoobrasil #100original #boutique #modamasculina #pecasoriginais",
+        "slides": [
+          "posts-extra/02-mapa-roxo/png/slide-01.png"
+        ]
+      }
+    ]
   }
 ];
