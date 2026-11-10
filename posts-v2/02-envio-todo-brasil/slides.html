@@ -2,8 +2,23 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>GMSR — Versão 2 · Post 02 · Envio para todo o Brasil</title>
+<title>GMSR — Versão 2 · Post 02 · Como funciona sua encomenda</title>
 <link rel="stylesheet" href="../../shared/gmsr-v2.css">
+<style>
+  /* "print" de conversa dentro da polaroid */
+  .chat{background:#0E141E;padding:22px;display:flex;flex-direction:column;gap:14px}
+  .chat .media{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .chat .media div{position:relative;aspect-ratio:1/1.15;overflow:hidden;border-radius:10px}
+  .chat .media img{width:100%;height:100%;object-fit:cover;display:block}
+  .chat .play{position:absolute;inset:0;display:grid;place-items:center}
+  .chat .play i{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.85);display:grid;place-items:center;font-style:normal;color:#111;font-size:26px;padding-left:5px}
+  .chat .dur{position:absolute;left:8px;bottom:8px;font-family:Mono;font-size:14px;color:#fff;background:rgba(0,0,0,.5);padding:2px 6px;border-radius:6px}
+  .chat .msg{background:#3E8FCB;color:#fff;font-family:Inter;font-size:21px;line-height:1.35;padding:14px 18px;border-radius:16px 16px 4px 16px;align-self:flex-end;max-width:92%}
+  .chat .msg small{display:block;text-align:right;font-size:13px;opacity:.75;margin-top:4px}
+  .pola.chatp img{aspect-ratio:auto}
+  .mini{position:absolute;right:70px;top:560px;width:420px;height:420px;z-index:4}
+  .mini .mapa{width:100%;height:100%}
+</style>
 </head>
 <body>
 
@@ -13,96 +28,123 @@
   <img class="mark" src="../../assets/logo/gmsr-mono-branco.png" alt="">
   <div class="pg counter"></div>
   <div class="wrap" style="padding-top:250px">
-    <p class="note" style="color:var(--sky)">◆ GMSR Maison · Envios</p>
-    <h1 style="font-size:92px;margin-top:22px">Da maison<br>para a<br><em>sua porta.</em></h1>
-    <p class="mono" style="margin-top:34px;max-width:540px">Enviamos para os 27 estados do Brasil. <em>Do Oiapoque ao Chuí.</em></p>
+    <p class="note" style="color:var(--sky)">◆ GMSR Maison · Encomendas</p>
+    <h1 style="font-size:78px;margin-top:22px">Como funciona<br>a sua<br><em>encomenda.</em></h1>
+    <p class="mono" style="margin-top:34px;max-width:520px">Você pede. A gente busca, confere e mostra. <em>Só enviamos depois da sua aprovação.</em></p>
   </div>
-  <div class="pola" style="width:320px;right:76px;top:610px;transform:rotate(6deg)"><img src="../../assets/fotos/louis-vuitton.jpg" alt=""><span>Pronto para envio</span></div>
-  <div class="pola" style="width:280px;left:110px;top:800px;transform:rotate(-6deg)"><img src="../../assets/fotos/nude-project.jpg" alt=""><span>Nude Project</span></div>
+  <div class="pola" style="width:320px;right:76px;top:620px;transform:rotate(6deg)"><img src="../../assets/fotos/zegna.jpg" alt=""><span>Encomenda. <b>Zegna</b></span></div>
+  <div class="pola" style="width:280px;left:110px;top:840px;transform:rotate(-6deg)"><img src="../../assets/fotos/moncler-jacket.jpg" alt=""><span>Encomenda. <b>Moncler</b></span></div>
   <span class="star" style="right:430px;top:520px">✦</span>
-  <div class="coords">27 ESTADOS · RASTREIO EM TODOS OS ENVIOS</div>
   <div class="swipe2">DESLIZE →</div>
   <div class="foot">100% original · <em>envio para todo o Brasil</em></div>
 </section>
 
-<!-- 02 · O PROCESSO -->
+<!-- 02 · O MERCADO -->
 <section class="slide v2">
   <div class="frame"></div>
   <img class="mark" src="../../assets/logo/gmsr-mono-branco.png" alt="">
   <div class="pg counter"></div>
   <div class="big">01</div>
-  <div class="lbl">O processo</div>
+  <div class="lbl">O mercado</div>
   <div class="wrap" style="padding-top:470px">
-    <h1 style="font-size:66px">Simples <em>assim.</em></h1>
+    <h1 style="font-size:50px"><em>Encontrar uma peça</em> é fácil.<br>Encontrar a original, não.</h1>
+    <p class="mono" style="margin-top:28px;max-width:850px">Hoje qualquer um promete “a peça que você quer”. Sem curadoria, você compra no escuro e só descobre o que recebeu quando chega.</p>
   </div>
-  <div class="step" style="left:90px;top:640px"><span class="t">Escolha</span><span class="n">◆1</span>Você escolhe a peça no feed</div>
-  <div class="arrowline" style="left:362px;top:715px;width:40px"></div>
-  <div class="step" style="left:405px;top:640px"><span class="t">Confirmação</span><span class="n">◆2</span>Confirmamos tamanho no Direct</div>
-  <div class="arrowline" style="left:677px;top:715px;width:40px"></div>
-  <div class="step" style="left:720px;top:640px"><span class="t">Conferência</span><span class="n">◆3</span>Conferimos peça e embalagem</div>
-  <div class="arrowline" style="left:850px;top:800px;width:90px;transform:rotate(130deg)"></div>
-  <div class="step" style="left:560px;top:900px"><span class="t">Envio</span><span class="n">◆4</span>Você recebe o código de rastreio</div>
-  <div class="arrowline" style="left:556px;top:990px;width:70px;transform:rotate(150deg)"></div>
-  <div class="step" style="left:200px;top:1010px"><span class="t">Entrega</span><span class="n">◆5</span>A peça chega na sua porta</div>
-  <div class="foot">Você não compra no escuro. <em>Você acompanha cada etapa.</em></div>
+  <span class="star" style="right:180px;top:420px">✦</span>
+  <div class="pola" style="width:300px;left:90px;top:850px;transform:rotate(-5deg)"><img src="../../assets/fotos/amiri.jpg" alt=""><span>Tag. <b>Amiri</b></span></div>
+  <div class="pola" style="width:290px;left:400px;top:900px;transform:rotate(3deg)"><img src="../../assets/fotos/louis-vuitton.jpg" alt=""><span>Caixa. <b>LV</b></span></div>
+  <div class="pola" style="width:290px;right:80px;top:850px;transform:rotate(7deg)"><img src="../../assets/fotos/rlx-polo.jpg" alt=""><span>Etiqueta. <b>RLX</b></span></div>
+  <div class="foot">Imagens reais do acervo · <em>na GMSR, encomenda é curadoria.</em></div>
 </section>
 
-<!-- 03 · EMBALAGEM -->
+<!-- 03 · O PROCESSO -->
 <section class="slide v2">
   <div class="frame"></div>
   <img class="mark" src="../../assets/logo/gmsr-mono-branco.png" alt="">
   <div class="pg counter"></div>
   <div class="big">02</div>
-  <div class="lbl">O cuidado</div>
+  <div class="lbl">O processo</div>
   <div class="wrap" style="padding-top:470px">
-    <h1 style="font-size:66px">Chega como<br><em>deve chegar.</em></h1>
-    <p class="mono" style="margin-top:28px;max-width:820px">Cada peça é conferida e embalada com cuidado, com a embalagem da marca quando ela acompanha a peça.</p>
+    <h1 style="font-size:66px">Na GMSR <em>é diferente.</em></h1>
   </div>
-  <div class="pola" style="width:290px;left:90px;top:810px;transform:rotate(-5deg)"><img src="../../assets/fotos/loro-piana.jpg" alt=""><span>Loro Piana</span></div>
-  <div class="pola" style="width:290px;left:395px;top:860px;transform:rotate(3deg)"><img src="../../assets/fotos/cdg-play.jpg" alt=""><span>CDG Play</span></div>
-  <div class="pola" style="width:290px;right:80px;top:790px;transform:rotate(7deg)"><img src="../../assets/fotos/louis-vuitton.jpg" alt=""><span>Louis Vuitton</span></div>
-  <div class="note" style="position:absolute;right:96px;top:740px;z-index:6">Imagens reais do nosso acervo.</div>
-  <div class="foot">Não importa a distância: <em>o cuidado é o mesmo.</em></div>
+  <div class="step" style="left:90px;top:620px"><span class="t">Referência</span><span class="n">◆1</span>Você envia a foto ou o nome da peça</div>
+  <div class="arrowline" style="left:362px;top:710px;width:40px"></div>
+  <div class="step" style="left:405px;top:620px"><span class="t">Busca</span><span class="n">◆2</span>Buscamos a peça original com nossa curadoria</div>
+  <div class="arrowline" style="left:677px;top:710px;width:40px"></div>
+  <div class="step" style="left:720px;top:620px"><span class="t">Conferência</span><span class="n">◆3</span>Conferimos tags, etiquetas e acabamento</div>
+  <div class="arrowline" style="left:850px;top:830px;width:80px;transform:rotate(125deg)"></div>
+  <div class="step" style="left:560px;top:900px"><span class="t">Aprovação</span><span class="n">◆4</span>Você recebe fotos e vídeos para aprovar</div>
+  <div class="arrowline" style="left:556px;top:1000px;width:70px;transform:rotate(155deg)"></div>
+  <div class="step" style="left:200px;top:1000px"><span class="t">Envio</span><span class="n">◆5</span>Após sua aprovação, enviamos com rastreio</div>
+  <div class="foot">Você não compra no escuro. <em>Você acompanha o processo.</em></div>
 </section>
 
-<!-- 04 · ENCOMENDAS -->
+<!-- 04 · APROVAÇÃO -->
 <section class="slide v2">
   <div class="frame"></div>
   <img class="mark" src="../../assets/logo/gmsr-mono-branco.png" alt="">
   <div class="pg counter"></div>
   <div class="big">03</div>
-  <div class="lbl">Encomendas</div>
-  <div class="note" style="position:absolute;right:96px;top:250px;z-index:6;line-height:1.8;text-align:right">✓ Peça específica<br>✓ Modelo e tamanho<br>✓ 100% original</div>
+  <div class="lbl">A aprovação</div>
+  <div class="note" style="position:absolute;right:96px;top:250px;z-index:6;line-height:1.8;text-align:right">✓ Fotos reais<br>✓ Vídeos reais<br>✓ Sua aprovação</div>
   <div class="wrap" style="padding-top:470px">
-    <h1 style="font-size:62px">Não achou?<br><em>A gente busca.</em></h1>
-    <div class="checks" style="margin-top:40px;max-width:540px">
-      <div><i>◆1</i>Você manda a foto ou o nome da peça</div>
-      <div><i>◆2</i>A gente busca a peça original</div>
-      <div><i>◆3</i>Confirmamos os detalhes com você</div>
-      <div><i>◆4</i>Enviamos para qualquer lugar do Brasil</div>
-    </div>
+    <h1 style="font-size:58px">Você participa<br><em>de cada etapa.</em></h1>
+    <p class="mono" style="margin-top:28px;max-width:470px">Depois da conferência, enviamos fotos e vídeos reais da sua peça para você ver cada detalhe.</p>
+    <p class="mono" style="margin-top:60px;max-width:470px;color:var(--paper)">Nada é enviado<br>sem a sua <em>aprovação.</em></p>
   </div>
-  <div class="pola" style="width:330px;right:70px;top:640px;transform:rotate(5deg)"><img src="../../assets/fotos/moncler-jacket.jpg" alt=""><span>Encomenda. <b>Moncler</b></span></div>
+  <div class="pola chatp" style="width:430px;right:60px;top:560px;transform:rotate(5deg)">
+    <div class="chat">
+      <div class="media">
+        <div><img src="../../assets/fotos/zegna.jpg" alt=""></div>
+        <div><img src="../../assets/fotos/zegna.jpg" alt="" style="object-position:30% 60%;transform:scale(1.4)"><span class="play"><i>▶</i></span><span class="dur">0:18</span></div>
+      </div>
+      <div class="msg">Sua peça chegou! Seguem as fotos e o vídeo para você conferir antes do envio. ◆<small>GMSR Maison</small></div>
+    </div>
+    <span>Aprovação. <b>Fotos e vídeo</b></span>
+  </div>
   <div class="swipe2">DESLIZE →</div>
-  <div class="foot">Veja as entregas no destaque <em>Encomendas.</em></div>
+  <div class="foot">O que você aprova <em>é o que você recebe.</em></div>
 </section>
 
-<!-- 05 · FINAL -->
-<section class="slide v2 fade">
+<!-- 05 · ENVIO -->
+<section class="slide v2">
   <div class="frame"></div>
   <img class="mark" src="../../assets/logo/gmsr-mono-branco.png" alt="">
   <div class="pg counter"></div>
   <div class="big">04</div>
-  <div class="lbl">Onde você estiver</div>
+  <div class="lbl">O envio</div>
   <div class="wrap" style="padding-top:470px">
-    <h1 style="font-size:72px">27 estados.<br>1 padrão.</h1>
-    <p class="mono" style="margin-top:30px;max-width:600px">AC · AL · AP · AM · BA · CE · DF · ES · GO · MA · MT · MS · MG · PA · PB · PR · PE · PI · RJ · RN · RS · RO · RR · SC · SP · SE · TO</p>
-    <p class="h" style="font-size:50px;margin-top:80px;text-align:right">Onde você estiver,<br>a GMSR chega.</p>
+    <h1 style="font-size:54px">Aprovou?<br><em>A gente envia.</em></h1>
+    <div class="checks" style="margin-top:40px;max-width:470px">
+      <div><i>◆</i>Para os 27 estados do Brasil</div>
+      <div><i>◆</i>Embalada com cuidado</div>
+      <div><i>◆</i>Com código de rastreio</div>
+    </div>
   </div>
-  <div class="coords">@GMSR_MAISON · PEÇA PELO DIRECT</div>
+  <div class="mini"><div class="mapa" data-cores="#8CC8EE,#5FA8DF,#A9D6F3,#3E8FCB"></div></div>
+  <div class="coords">DO OIAPOQUE AO CHUÍ</div>
+  <div class="swipe2">DESLIZE →</div>
+  <div class="foot">Não importa a distância: <em>o cuidado é o mesmo.</em></div>
+</section>
+
+<!-- 06 · FINAL -->
+<section class="slide v2 fade">
+  <div class="frame"></div>
+  <img class="mark" src="../../assets/logo/gmsr-mono-branco.png" alt="">
+  <div class="pg counter"></div>
+  <div class="big">05</div>
+  <div class="lbl">Acesso</div>
+  <div class="wrap" style="padding-top:470px">
+    <h1 style="font-size:72px">Agora você<br>entende.</h1>
+    <p class="mono" style="margin-top:30px;max-width:640px">Encomenda não é só pedir uma peça. É buscar a original, conferir cada detalhe e mostrar tudo para você antes de enviar.</p>
+    <p class="h" style="font-size:50px;margin-top:100px;text-align:right">Ou é original,<br>ou não é <em style="color:var(--ink)">GMSR.</em></p>
+  </div>
+  <div class="coords">MANDE A REFERÊNCIA NO DIRECT · @GMSR_MAISON</div>
   <div class="foot">Luxury isn't what we sell, <em>it's what you become.</em></div>
 </section>
 
+<script src="../../assets/mapa-brasil.js"></script>
 <script src="../../shared/gmsr.js"></script>
+<script src="../../shared/mapa.js"></script>
 </body>
 </html>

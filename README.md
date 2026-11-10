@@ -10,6 +10,10 @@ Página para mostrar os posts ao cliente: **https://jao-stack-creator.github.io/
 
 O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site` (ou `npm run render`, que já faz os dois) para atualizar a lista de slides e as legendas.
 
+## Aprovados pelo cliente
+
+No site, a primeira aba ("Aprovados pelo cliente") reúne a seleção final: Post 1 e Post 2 da versão 2, o mapa azul e a grade "Quem é o dono". A lista fica em `scripts/build-site.mjs`.
+
 ## Posts prontos
 
 **Versão 1** (identidade azul, tipografia condensada):
@@ -25,7 +29,7 @@ O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site
 | # | Post | Slides | Pasta |
 |---|------|--------|-------|
 | 01 | Por que escolher a GMSR | 5 | [`posts-v2/01-sobre-a-marca`](posts-v2/01-sobre-a-marca) |
-| 02 | Da maison para a sua porta | 5 | [`posts-v2/02-envio-todo-brasil`](posts-v2/02-envio-todo-brasil) |
+| 02 | Como funciona a sua encomenda | 6 | [`posts-v2/02-envio-todo-brasil`](posts-v2/02-envio-todo-brasil) |
 | 03 | O acervo | 5 | [`posts-v2/03-produtos`](posts-v2/03-produtos) |
 
 **Post único · Mapa** (imagem única sobre o envio, em duas cores):

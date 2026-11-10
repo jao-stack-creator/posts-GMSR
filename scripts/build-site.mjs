@@ -6,6 +6,12 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const versions = [
+  { id: 'aprovados', name: 'Aprovados pelo cliente', items: [
+    { base: 'posts-v2', dir: '01-sobre-a-marca', title: 'Por que escolher a GMSR' },
+    { base: 'posts-v2', dir: '02-envio-todo-brasil', title: 'Como funciona a sua encomenda' },
+    { base: 'posts-extra', dir: '01-mapa-azul', title: 'Mapa do Brasil · imagem única' },
+    { base: 'posts-grade', dir: '01-grade-loja', title: 'Grade · Quem é o dono', ratio: '3/4' },
+  ] },
   { id: 'v1', name: 'Versão 1', base: 'posts', titles: {
     '01-sobre-a-marca': 'Sobre a marca',
     '02-envio-todo-brasil': 'Envio para todo o Brasil',
@@ -13,7 +19,7 @@ const versions = [
   } },
   { id: 'v2', name: 'Versão 2', base: 'posts-v2', titles: {
     '01-sobre-a-marca': 'Por que escolher a GMSR',
-    '02-envio-todo-brasil': 'Da maison para a sua porta',
+    '02-envio-todo-brasil': 'Como funciona a sua encomenda',
     '03-produtos': 'O acervo',
   } },
   { id: 'mapa', name: 'Post único · Mapa', base: 'posts-extra', titles: {
@@ -25,18 +31,23 @@ const versions = [
   } },
 ];
 
-const out = versions.filter(v => existsSync(join(root, v.base))).map(v => ({
+function load(base, dir, i, title, ratio) {
+    const md = readFileSync(join(root, base, dir, 'legenda.md'), 'utf8');
+    const caption = (md.split('## Legenda')[1] || '').split('\n---')[0].trim();
+    let slides = readdirSync(join(root, base, dir, 'png')).filter(f => f.endsWith('.png')).sort()
+      .map(f => `${base}/${dir}/png/${f}`);
+    const preview = existsSync(join(root, base, dir, 'previa-grade.png')) ? `${base}/${dir}/previa-grade.png` : null;
+    if (preview) slides = [preview, ...slides];
+    return { n: i + 1, dir: `${base}/${dir}`, title, caption, slides, ratio: ratio || '4/5', preview: !!preview };
+}
+
+const out = versions.filter(v => v.items || existsSync(join(root, v.base))).map(v => ({
   id: v.id,
   name: v.name,
-  posts: readdirSync(join(root, v.base)).sort().filter(d => existsSync(join(root, v.base, d, 'png'))).map((dir, i) => {
-    const md = readFileSync(join(root, v.base, dir, 'legenda.md'), 'utf8');
-    const caption = (md.split('## Legenda')[1] || '').split('\n---')[0].trim();
-    let slides = readdirSync(join(root, v.base, dir, 'png')).filter(f => f.endsWith('.png')).sort()
-      .map(f => `${v.base}/${dir}/png/${f}`);
-    const preview = existsSync(join(root, v.base, dir, 'previa-grade.png')) ? `${v.base}/${dir}/previa-grade.png` : null;
-    if (preview) slides = [preview, ...slides];
-    return { n: i + 1, dir, title: v.titles[dir] || dir, caption, slides, ratio: v.ratio || '4/5', preview: !!preview };
-  }),
+  posts: v.items
+    ? v.items.map((it, i) => load(it.base, it.dir, i, it.title, it.ratio))
+    : readdirSync(join(root, v.base)).sort().filter(d => existsSync(join(root, v.base, d, 'png')))
+        .map((dir, i) => load(v.base, dir, i, v.titles[dir] || dir, v.ratio)),
 }));
 
 writeFileSync(join(root, 'site-data.js'), `// gerado por scripts/build-site.mjs — não edite à mão\nwindow.VERSIONS = ${JSON.stringify(out, null, 2)};\n`);

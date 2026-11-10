@@ -36,7 +36,7 @@
 
   .versions{max-width:1120px;margin:0 auto;padding:8px 24px 6px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
   .versions .lab{font-family:Mono;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
-  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px}
+  .seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:24px;padding:4px}
   .seg button{all:unset;cursor:pointer;font-family:Mono;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:9px 18px;border-radius:999px;transition:.2s}
   .seg button[aria-selected=true]{background:var(--sky);color:var(--ink)}
   .vdesc{font-family:Bodoni;font-style:italic;font-size:17px;color:var(--sky)}
@@ -156,7 +156,7 @@
 <script>
 const $ = id => document.getElementById(id);
 const versions = window.VERSIONS;
-const vdesc = { v1: 'Identidade azul, tipografia condensada', v2: 'Editorial escuro, com fotos reais do acervo', mapa: 'Imagem única sobre o envio: duas opções de cor', grade: 'Três posts que formam uma imagem só na grade do perfil' };
+const vdesc = { aprovados: 'A seleção final para postar', v1: 'Identidade azul, tipografia condensada', v2: 'Editorial escuro, com fotos reais do acervo', mapa: 'Imagem única sobre o envio: duas opções de cor', grade: 'Três posts que formam uma imagem só na grade do perfil' };
 let v = 0, posts = versions[0].posts, p = 0, s = 0;
 
 $('tk').innerHTML = Array(2).fill(Array(12).fill('<span>GMSR MAISON</span><i>◆</i>').join('')).join('');

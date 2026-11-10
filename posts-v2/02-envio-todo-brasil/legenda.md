@@ -1,30 +1,30 @@
-# Versão 2 · Post 02 · Da maison para a sua porta
+# Versão 2 · Post 02 · Como funciona a sua encomenda
 
-**Formato:** carrossel, 5 slides (1080×1350)
-**Imagens:** `png/slide-01.png` … `png/slide-05.png`
+**Formato:** carrossel, 6 slides (1080×1350)
+**Imagens:** `png/slide-01.png` … `png/slide-06.png`
 
 ---
 
 ## Legenda
 
-Da maison para a sua porta. 🇧🇷
+Como funciona a sua encomenda na GMSR? ◆
 
-Enviamos para os 27 estados do Brasil, do Oiapoque ao Chuí. Simples assim:
+Encontrar uma peça é fácil. Encontrar a original, não. Por isso, na GMSR, encomenda é curadoria:
 
-1️⃣ Você escolhe a peça no feed
-2️⃣ Confirmamos o tamanho no Direct
-3️⃣ Conferimos a peça e a embalagem
-4️⃣ Você recebe o código de rastreio
-5️⃣ A peça chega na sua porta
+1️⃣ Você envia a foto ou o nome da peça
+2️⃣ Buscamos a peça original com a nossa curadoria
+3️⃣ Conferimos tags, etiquetas e acabamento
+4️⃣ Você recebe fotos e vídeos reais da peça para aprovar
+5️⃣ Após a sua aprovação, enviamos com código de rastreio
 
-Não achou o que procura? A gente busca: você manda a foto ou o nome da peça e nós encontramos a original para você.
+Nada é enviado sem a sua aprovação. Você não compra no escuro: você acompanha cada etapa.
 
-27 estados. 1 padrão. ◆
+📦 Enviamos para os 27 estados do Brasil
+📩 Mande a referência no Direct: @gmsr_maison
 
-📦 Veja as entregas no destaque *Encomendas*
-📩 Peça pelo Direct: @gmsr_maison
+Ou é original, ou não é GMSR.
 
 .
 .
 .
-#gmsrmaison #enviamosparatodoobrasil #100original #boutique #modamasculina #pecasoriginais #encomendas
+#gmsrmaison #encomendas #100original #boutique #modamasculina #pecasoriginais #enviamosparatodoobrasil
