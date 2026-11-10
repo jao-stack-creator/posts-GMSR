@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GMSR Maison · Posts</title>
+<meta name="description" content="Prévia dos posts de Instagram da GMSR Maison">
+<meta property="og:title" content="GMSR Maison · Posts">
+<meta property="og:description" content="Prévia dos posts de Instagram: Post 1, Post 2 e Post 3">
+<meta property="og:image" content="posts/01-sobre-a-marca/png/slide-01.png">
+<link rel="icon" href="assets/logo/gmsr-badge.png">
+<style>
+  @font-face{font-family:Antonio;font-weight:700;src:url(assets/fonts/antonio-latin-700-normal.woff2)}
+  @font-face{font-family:Antonio;font-weight:200;src:url(assets/fonts/antonio-latin-200-normal.woff2)}
+  @font-face{font-family:Bodoni;font-style:italic;src:url(assets/fonts/bodoni-moda-latin-400-italic.woff2)}
+  @font-face{font-family:Inter;font-weight:400;src:url(assets/fonts/inter-latin-400-normal.woff2)}
+  @font-face{font-family:Inter;font-weight:600;src:url(assets/fonts/inter-latin-600-normal.woff2)}
+  @font-face{font-family:Mono;src:url(assets/fonts/ibm-plex-mono-latin-400-normal.woff2)}
+  :root{--navy:#32445C;--ink:#121A26;--ink2:#1A2434;--sky:#8CC8EE;--paper:#F3F0E9;--line:rgba(243,240,233,.14)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--ink)}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--paper);min-height:100vh;
+    background:radial-gradient(80% 50% at 50% 0%,rgba(62,143,203,.22),transparent 70%),var(--ink)}
+  a{color:inherit}
+
+  .ticker{overflow:hidden;white-space:nowrap;background:var(--paper);color:var(--ink);font-family:Antonio;font-weight:700;
+    letter-spacing:.14em;font-size:15px;padding:8px 0}
+  .ticker div{display:inline-block;animation:run 40s linear infinite}
+  .ticker span{padding:0 14px}.ticker i{font-style:normal;color:#3E8FCB}
+  @keyframes run{to{transform:translateX(-50%)}}
+
+  header{max-width:1120px;margin:0 auto;padding:48px 24px 24px;display:flex;align-items:center;gap:22px}
+  header img{width:76px;height:76px}
+  header h1{font-family:Antonio;font-weight:700;font-size:44px;letter-spacing:.04em;line-height:1}
+  header p{font-family:Bodoni;font-style:italic;font-size:21px;color:var(--sky);margin-top:6px}
+
+  nav{max-width:1120px;margin:0 auto;padding:12px 24px 0;display:flex;gap:12px;flex-wrap:wrap}
+  nav button{all:unset;cursor:pointer;font-family:Antonio;font-weight:700;font-size:26px;letter-spacing:.08em;text-transform:uppercase;
+    padding:14px 26px;border:1px solid var(--line);transition:.2s}
+  nav button small{display:block;font-family:Mono;font-weight:400;font-size:11px;letter-spacing:.12em;opacity:.65;margin-top:4px}
+  nav button:hover{border-color:var(--sky)}
+  nav button[aria-selected=true]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+  main{max-width:1120px;margin:0 auto;padding:32px 24px 80px;display:grid;grid-template-columns:minmax(0,470px) 1fr;gap:48px;align-items:start}
+
+  /* card estilo Instagram */
+  .ig{background:#000;border:1px solid #262626;border-radius:10px;overflow:hidden;font-size:14px}
+  .ig-top{display:flex;align-items:center;gap:10px;padding:10px 12px}
+  .ig-top img{width:34px;height:34px;border-radius:50%}
+  .ig-top b{font-weight:600}
+  .ig-top span{margin-left:auto;font-size:20px;opacity:.8}
+  .stage{position:relative;aspect-ratio:4/5;overflow:hidden;background:#0b0f16;touch-action:pan-y}
+  .track{display:flex;height:100%;transition:transform .35s ease}
+  .track img{width:100%;height:100%;flex:none;object-fit:cover;user-select:none;-webkit-user-drag:none}
+  .arrow{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:0;cursor:pointer;
+    background:rgba(255,255,255,.85);color:#111;font-size:18px;display:grid;place-items:center}
+  .arrow.prev{left:10px}.arrow.next{right:10px}
+  .arrow[hidden]{display:none}
+  .count{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.6);border-radius:12px;padding:3px 9px;font-size:12px}
+  .dots{display:flex;justify-content:center;gap:4px;padding:12px 0 4px}
+  .dots i{width:6px;height:6px;border-radius:50%;background:#555}
+  .dots i.on{background:#3E9BF5}
+  .ig-cap{padding:6px 14px 16px;line-height:1.45;white-space:pre-line;color:#f5f5f5}
+  .ig-cap b{font-weight:600}
+  .ig-cap.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .more{all:unset;cursor:pointer;color:#a8a8a8;padding:0 14px 16px;display:block}
+
+  .side h2{font-family:Antonio;font-weight:700;font-size:72px;line-height:1;text-transform:uppercase}
+  .side h2 em{font-family:Bodoni;font-weight:400;text-transform:none;color:var(--sky);font-size:.72em;display:block;margin-top:6px}
+  .side .meta{font-family:Mono;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.65;margin-top:18px}
+  .thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;margin-top:28px}
+  .thumbs button{all:unset;cursor:pointer;aspect-ratio:4/5;outline:2px solid transparent;outline-offset:2px;transition:.15s}
+  .thumbs button.on{outline-color:var(--sky)}
+  .thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+  .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{all:unset;cursor:pointer;font-family:Antonio;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:17px;
+    padding:13px 20px;border:1px solid var(--paper)}
+  .btn.solid{background:var(--paper);color:var(--ink)}
+  .btn:hover{border-color:var(--sky)}
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--paper);color:var(--ink);padding:12px 20px;
+    font-weight:600;opacity:0;transition:.25s;pointer-events:none}
+  .toast.show{opacity:1}
+
+  footer{border-top:1px solid var(--line);text-align:center;padding:28px 24px 40px;font-family:Mono;font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;opacity:.6}
+
+  @media (max-width:860px){
+    main{grid-template-columns:1fr;gap:28px;padding-top:20px}
+    .side h2{font-size:44px}
+    .thumbs{display:none}
+    .actions{margin-top:18px}
+    .btn{flex:1;text-align:center;font-size:15px;padding:12px 10px}
+    header{padding:24px 16px 12px;gap:14px}
+    header img{width:54px;height:54px}
+    header h1{font-size:26px}
+    header p{font-size:15px}
+    nav{padding:8px 16px 0;gap:8px}
+    nav button{font-size:20px;padding:12px 6px;flex:1;text-align:center}
+    nav button small{display:none}
+    main{padding:16px 16px 60px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker"><div id="tk"></div></div>
+
+<header>
+  <img src="assets/logo/gmsr-badge.png" alt="GMSR">
+  <div>
+    <h1>GMSR MAISON · POSTS</h1>
+    <p>Luxury isn't what we sell, it's what you become.</p>
+  </div>
+</header>
+
+<nav id="tabs" role="tablist"></nav>
+
+<main>
+  <article class="ig">
+    <div class="ig-top"><img src="assets/logo/gmsr-badge.png" alt=""><b>gmsr_maison</b><span>···</span></div>
+    <div class="stage" id="stage">
+      <div class="track" id="track"></div>
+      <button class="arrow prev" id="prev" aria-label="Anterior">‹</button>
+      <button class="arrow next" id="next" aria-label="Próximo">›</button>
+      <div class="count" id="count"></div>
+    </div>
+    <div class="dots" id="dots"></div>
+    <p class="ig-cap clamp" id="cap"></p>
+    <button class="more" id="more">mais</button>
+  </article>
+
+  <section class="side">
+    <h2 id="title"></h2>
+    <p class="meta" id="info"></p>
+    <div class="thumbs" id="thumbs"></div>
+    <div class="actions">
+      <button class="btn solid" id="dl">Baixar slide</button>
+      <button class="btn" id="dlall">Baixar todos</button>
+      <button class="btn" id="copy">Copiar legenda</button>
+    </div>
+  </section>
+</main>
+
+<footer>GMSR Maison · @gmsr_maison · Arraste ou use as setas para ver os slides</footer>
+<div class="toast" id="toast"></div>
+
+<script src="site-data.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const posts = window.POSTS;
+let p = 0, s = 0;
+
+$('tk').innerHTML = Array(2).fill(Array(12).fill('<span>GMSR MAISON</span><i>◆</i>').join('')).join('');
+
+$('tabs').innerHTML = posts.map((x, i) =>
+  `<button role="tab" data-i="${i}">Post ${x.n}<small>${x.title}</small></button>`).join('');
+$('tabs').onclick = e => { const b = e.target.closest('button'); if (b) openPost(+b.dataset.i); };
+
+function openPost(i) {
+  p = i; s = 0;
+  const x = posts[p];
+  history.replaceState(null, '', '#post-' + x.n);
+  [...$('tabs').children].forEach((b, j) => b.setAttribute('aria-selected', j === p));
+  $('track').innerHTML = x.slides.map((src, j) => `<img src="${src}" alt="Post ${x.n}, slide ${j + 1}" ${j ? 'loading="lazy"' : ''}>`).join('');
+  $('dots').innerHTML = x.slides.map(() => '<i></i>').join('');
+  $('thumbs').innerHTML = x.slides.map((src, j) => `<button data-j="${j}"><img src="${src}" alt="" loading="lazy"></button>`).join('');
+  $('title').innerHTML = `Post ${x.n}<em>${x.title}</em>`;
+  $('info').textContent = `Carrossel · ${x.slides.length} slides · 1080 × 1350`;
+  $('cap').innerHTML = '<b>gmsr_maison</b> ' + x.caption.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\*/g, '');
+  $('cap').classList.add('clamp'); $('more').hidden = false;
+  go(0);
+}
+function go(j) {
+  const x = posts[p];
+  s = Math.max(0, Math.min(x.slides.length - 1, j));
+  $('track').style.transform = `translateX(-${s * 100}%)`;
+  $('count').textContent = `${s + 1}/${x.slides.length}`;
+  $('prev').hidden = s === 0; $('next').hidden = s === x.slides.length - 1;
+  [...$('dots').children].forEach((d, k) => d.classList.toggle('on', k === s));
+  [...$('thumbs').children].forEach((d, k) => d.classList.toggle('on', k === s));
+}
+$('prev').onclick = () => go(s - 1);
+$('next').onclick = () => go(s + 1);
+$('thumbs').onclick = e => { const b = e.target.closest('button'); if (b) go(+b.dataset.j); };
+$('more').onclick = () => { $('cap').classList.remove('clamp'); $('more').hidden = true; };
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(s + 1); if (e.key === 'ArrowLeft') go(s - 1); });
+
+let x0 = null;
+$('stage').addEventListener('pointerdown', e => { x0 = e.clientX; });
+$('stage').addEventListener('pointerup', e => {
+  if (x0 === null) return; const dx = e.clientX - x0; x0 = null;
+  if (Math.abs(dx) > 40) go(s + (dx < 0 ? 1 : -1));
+});
+
+function toast(t) { $('toast').textContent = t; $('toast').classList.add('show'); setTimeout(() => $('toast').classList.remove('show'), 1800); }
+function download(src, name) { const a = document.createElement('a'); a.href = src; a.download = name; document.body.append(a); a.click(); a.remove(); }
+$('dl').onclick = () => { const x = posts[p]; download(x.slides[s], `gmsr-post${x.n}-slide${s + 1}.png`); };
+$('dlall').onclick = () => { const x = posts[p]; x.slides.forEach((src, j) => setTimeout(() => download(src, `gmsr-post${x.n}-slide${j + 1}.png`), j * 400)); };
+$('copy').onclick = async () => {
+  const t = posts[p].caption.replace(/\*/g, '');
+  try { await navigator.clipboard.writeText(t); toast('Legenda copiada'); }
+  catch { const ta = document.createElement('textarea'); ta.value = t; document.body.append(ta); ta.select(); document.execCommand('copy'); ta.remove(); toast('Legenda copiada'); }
+};
+
+const m = location.hash.match(/post-(\d+)/);
+openPost(m ? Math.max(0, posts.findIndex(x => x.n === +m[1])) : 0);
+</script>
+</body>
+</html>

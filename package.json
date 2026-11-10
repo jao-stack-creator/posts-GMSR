@@ -4,7 +4,8 @@
   "type": "module",
   "description": "Posts de Instagram da GMSR Maison",
   "scripts": {
-    "render": "node scripts/render.mjs"
+    "render": "node scripts/render.mjs && node scripts/build-site.mjs",
+    "site": "node scripts/build-site.mjs"
   },
   "devDependencies": {
     "playwright": "^1.48.0"

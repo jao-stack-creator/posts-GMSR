@@ -4,6 +4,12 @@ Posts de Instagram da **GMSR Maison** ([@gmsr_maison](https://www.instagram.com/
 
 > *Luxury isn't what we sell, it's what you become.*
 
+## Site de apresentação
+
+Página para mostrar os posts ao cliente: **https://jao-stack-creator.github.io/posts-GMSR/**
+
+O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site` (ou `npm run render`, que já faz os dois) para atualizar a lista de slides e as legendas.
+
 ## Posts prontos
 
 | # | Post | Slides | Pasta |
