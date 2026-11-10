@@ -12,11 +12,23 @@ O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site
 
 ## Posts prontos
 
+**Versão 1** (identidade azul, tipografia condensada):
+
 | # | Post | Slides | Pasta |
 |---|------|--------|-------|
 | 01 | Sobre a marca | 5 | [`posts/01-sobre-a-marca`](posts/01-sobre-a-marca) |
 | 02 | Envio para todo o Brasil | 4 | [`posts/02-envio-todo-brasil`](posts/02-envio-todo-brasil) |
 | 03 | Nossos produtos e grifes | 7 | [`posts/03-produtos`](posts/03-produtos) |
+
+**Versão 2** (editorial escuro, com fotos reais do acervo em polaroids; inspirada no formato de processo numerado):
+
+| # | Post | Slides | Pasta |
+|---|------|--------|-------|
+| 01 | Por que escolher a GMSR | 5 | [`posts-v2/01-sobre-a-marca`](posts-v2/01-sobre-a-marca) |
+| 02 | Da maison para a sua porta | 5 | [`posts-v2/02-envio-todo-brasil`](posts-v2/02-envio-todo-brasil) |
+| 03 | O acervo | 5 | [`posts-v2/03-produtos`](posts-v2/03-produtos) |
+
+As fotos da versão 2 ficam em `assets/fotos/`. Elas foram recortadas dos prints do feed; se tiverem as fotos originais em alta, substituam mantendo os mesmos nomes e rodem `npm run render`. O estilo da versão 2 está em `shared/gmsr-v2.css`.
 
 Cada pasta tem:
 - `png/`: as imagens finais em 1080×1350 (4:5), prontas para postar em ordem
@@ -53,7 +65,7 @@ O layout se inspira na estrutura do perfil de referência: faixa repetida com o 
 npm install
 npx playwright install chromium
 npm run render          # todos os posts
-npm run render -- 02    # só o post 02
+npm run render -- v2/02 # só o post 02 da versão 2
 ```
 
 ## Criar um post novo

@@ -1,0 +1,47 @@
+/* ==========================================================
+   GMSR Maison — VERSÃO 2 (editorial · polaroids · processo)
+   Usa as mesmas fontes e cores da versão 1 (gmsr.css)
+   ========================================================== */
+@import url(gmsr.css);
+
+.v2{background:#07090D;color:var(--paper)}
+.v2 .frame{position:absolute;inset:54px 46px 120px;border:1.5px solid rgba(243,240,233,.16);z-index:1}
+.v2 .mark{position:absolute;top:80px;left:80px;width:74px;z-index:6;opacity:.9}
+.v2 .pg{position:absolute;top:84px;right:84px;font-family:Mono;font-size:20px;letter-spacing:.1em;color:rgba(243,240,233,.35);z-index:6}
+.v2 .big{position:absolute;left:66px;top:118px;font-family:Inter;font-weight:800;font-size:330px;line-height:1;letter-spacing:-.04em;color:#1C2330;z-index:2}
+.v2 .lbl{position:absolute;left:84px;top:176px;font-family:Mono;font-size:19px;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);z-index:4}
+.v2 .wrap{position:absolute;inset:0;z-index:4;padding:0 90px}
+
+.v2 h1,.v2 .h{font-family:Inter;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:1.02}
+.v2 h1 em,.v2 .h em{font-style:normal;color:var(--sky)}
+.v2 .mono{font-family:Mono;font-size:23px;line-height:1.6;letter-spacing:.06em;text-transform:uppercase;color:rgba(243,240,233,.78)}
+.v2 .mono em{font-style:normal;color:var(--sky)}
+.v2 .note{font-family:Mono;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,240,233,.5)}
+.v2 .coords{position:absolute;left:84px;bottom:150px;font-family:Mono;font-size:17px;letter-spacing:.14em;color:rgba(243,240,233,.38);z-index:6}
+.v2 .swipe2{position:absolute;right:84px;bottom:150px;font-family:Mono;font-size:17px;letter-spacing:.14em;color:rgba(243,240,233,.55);z-index:6}
+.v2 .foot{position:absolute;left:0;right:0;bottom:46px;text-align:center;font-family:Mono;font-size:19px;letter-spacing:.14em;line-height:1.6;text-transform:uppercase;color:rgba(243,240,233,.6);z-index:6}
+.v2 .foot em{font-style:normal;color:var(--sky)}
+.v2 .star{position:absolute;color:var(--sky);font-size:40px;z-index:6}
+
+/* polaroid */
+.pola{position:absolute;background:#ECEBE6;padding:16px 16px 58px;box-shadow:0 30px 60px rgba(0,0,0,.55);z-index:5}
+.pola img{display:block;width:100%;aspect-ratio:1/1.08;object-fit:cover}
+.pola span{position:absolute;left:18px;bottom:16px;font-family:Mono;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:#3a3a3a}
+.pola span b{font-weight:400;color:#7a7a7a}
+.pola:before{content:"";position:absolute;width:44%;height:42px;left:28%;top:-20px;background:rgba(200,200,200,.55);transform:rotate(-3deg)}
+
+/* caixas do fluxo */
+.step{position:absolute;width:270px;border:1.5px solid rgba(140,200,238,.7);padding:30px 22px;text-align:center;font-family:Mono;font-size:19px;
+  letter-spacing:.12em;line-height:1.55;text-transform:uppercase;color:rgba(243,240,233,.9);z-index:5;background:#07090D}
+.step .t{position:absolute;left:0;top:-34px;font-size:16px;color:rgba(243,240,233,.55)}
+.step .n{position:absolute;left:-14px;top:-14px;background:#07090D;padding:2px 6px;color:var(--paper);font-weight:400}
+.arrowline{position:absolute;height:1.5px;background:rgba(243,240,233,.35);transform-origin:0 50%;z-index:4}
+
+/* checklist */
+.checks{display:flex;flex-direction:column;gap:22px}
+.checks div{display:flex;gap:20px;align-items:baseline;font-family:Mono;font-size:23px;letter-spacing:.08em;text-transform:uppercase;line-height:1.45}
+.checks i{font-style:normal;color:var(--sky)}
+
+/* final com degradê azul */
+.v2.fade:after{content:"";position:absolute;top:0;bottom:0;right:0;width:46%;z-index:0;
+  background:linear-gradient(90deg,rgba(62,143,203,0),rgba(62,143,203,.55) 55%,#8CC8EE)}
