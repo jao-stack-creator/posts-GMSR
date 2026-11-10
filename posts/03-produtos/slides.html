@@ -10,8 +10,8 @@
   .cover .content{justify-content:center}
   .cover h1{font-size:168px;color:var(--paper);line-height:.95}
   .cover h2{font-size:74px;color:var(--ink);margin-top:10px}
-  .cover .icons{display:flex;gap:30px;color:var(--paper);margin-top:64px}
-  .cover .icons svg.ic{width:120px;height:120px;stroke-width:2.2}
+  .cover .icons{display:flex;gap:22px;color:var(--paper);margin-top:64px}
+  .cover .icons svg.ic{width:112px;height:112px;stroke-width:2.2}
   .cover .swipe{margin-top:64px;color:var(--paper)}
 
   .cat h1{font-size:120px;margin-top:20px}
@@ -22,6 +22,31 @@
   .cat .row .n{font-family:Mono;font-size:20px;color:rgba(243,240,233,.5);width:56px}
   .cat .row h3{font-family:Antonio;font-weight:700;font-size:54px;text-transform:uppercase}
   .cat .row p{font-size:25px;color:rgba(243,240,233,.7);margin-top:2px}
+
+  .cat .row{padding:14px 0}
+  .cat .row .ic{width:70px;height:70px}
+  .cat h1{font-size:104px}
+  .cat .list{margin-top:36px}
+  .cat .row h3{font-size:48px}
+  .cat .row p{font-size:24px}
+
+  .brands h1{font-size:118px;margin-top:16px}
+  .brands .list{margin-top:40px}
+  .brands .b{display:flex;align-items:center;justify-content:space-between;gap:30px;border-top:1px solid var(--line)}
+  .brands .b:last-child{border-bottom:1px solid var(--line)}
+  .brands .b .name{font-family:Antonio;font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+  .brands .b .where{font-family:Mono;font-size:19px;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);margin-top:6px}
+  .brands .b .item{font-size:23px;color:rgba(243,240,233,.65);margin-top:4px}
+  .brands .b .year{font-family:Antonio;font-weight:700;color:transparent;-webkit-text-stroke:1.6px rgba(243,240,233,.55);flex:none}
+  .brands.paris .b{padding:26px 0}
+  .brands.paris .b .name{font-size:66px}
+  .brands.paris .b .year{font-size:96px}
+  .brands.world .b{padding:13px 0}
+  .brands.world .b .name{font-size:44px}
+  .brands.world .b .where{font-size:17px;margin-top:2px}
+  .brands.world .b .item{font-size:20px;margin-top:2px}
+  .brands.world .b .year{font-size:62px}
+  .brands .flag{font-family:Mono;font-size:18px;letter-spacing:.1em;color:rgba(243,240,233,.5);margin-top:18px}
 
   .real h1{font-size:150px;margin-top:20px}
   .real .frame{margin-top:50px;height:430px;position:relative;border:10px solid var(--paper);
@@ -58,6 +83,7 @@
     <g id="i-knit"><path d="M36 14 L22 20 L12 40 L8 84 L20 86 L26 50 L26 88 L74 88 L74 50 L80 86 L92 84 L88 40 L78 20 L64 14 Q50 24 36 14 Z"/><path d="M26 80 L74 80 M20 78 L9 77 M80 78 L91 77"/></g>
     <g id="i-polo"><path d="M38 14 L22 20 L8 34 L18 46 L26 40 L26 88 L74 88 L74 40 L82 46 L92 34 L78 20 L62 14 L50 30 Z"/><path d="M38 14 L44 30 L50 30 L56 30 L62 14 M50 30 L50 48"/><circle cx="50" cy="38" r="1.5"/><circle cx="50" cy="45" r="1.5"/></g>
     <g id="i-jacket"><path d="M38 12 L22 18 L12 40 L8 84 L20 86 L26 52 L26 90 L74 90 L74 52 L80 86 L92 84 L88 40 L78 18 L62 12 L50 22 Z"/><path d="M50 22 L50 90 M38 12 L40 26 L50 22 L60 26 L62 12 M30 60 L42 60 M58 60 L70 60"/></g>
+    <g id="i-shoe"><path d="M8 58 L8 74 Q8 80 14 80 L88 80 Q94 80 94 74 L94 68 Q94 60 84 58 L62 52 Q52 50 46 42 L40 36 Q36 32 30 34 L12 40 Q8 42 8 48 Z"/><path d="M8 70 L94 70 M44 48 L52 44 M48 54 L56 50 M52 58 L60 55"/></g>
     <g id="i-bag"><path d="M18 36 L82 36 L88 88 L12 88 Z"/><path d="M36 36 L36 26 Q36 12 50 12 Q64 12 64 26 L64 36"/><path d="M18 50 L82 50"/></g>
   </defs>
 </svg>
@@ -75,6 +101,7 @@
       <svg class="ic" viewBox="0 0 100 100"><use href="#i-knit"/></svg>
       <svg class="ic" viewBox="0 0 100 100"><use href="#i-polo"/></svg>
       <svg class="ic" viewBox="0 0 100 100"><use href="#i-jacket"/></svg>
+      <svg class="ic" viewBox="0 0 100 100"><use href="#i-shoe"/></svg>
       <svg class="ic" viewBox="0 0 100 100"><use href="#i-bag"/></svg>
     </div>
     <div class="swipe">Confira ao lado
@@ -91,19 +118,59 @@
   <div class="meta tr counter"></div>
   <div class="content cat">
     <p class="small accent" style="margin-top:20px">◆ Do básico ao statement</p>
-    <h1 class="display">Cinco linhas,<br><span class="serif accent">um só padrão.</span></h1>
+    <h1 class="display">Seis linhas,<br><span class="serif accent">um só padrão.</span></h1>
     <div class="list">
       <div class="row"><span class="n">Nº01</span><svg class="ic" viewBox="0 0 100 100"><use href="#i-tee"/></svg><div><h3>Camisetas</h3><p>Do básico impecável à estampa que chama atenção.</p></div></div>
       <div class="row"><span class="n">Nº02</span><svg class="ic" viewBox="0 0 100 100"><use href="#i-knit"/></svg><div><h3>Tricôs &amp; Moletons</h3><p>Texturas marcantes para os dias mais frios.</p></div></div>
       <div class="row"><span class="n">Nº03</span><svg class="ic" viewBox="0 0 100 100"><use href="#i-polo"/></svg><div><h3>Polos</h3><p>O equilíbrio entre o casual e o elegante.</p></div></div>
       <div class="row"><span class="n">Nº04</span><svg class="ic" viewBox="0 0 100 100"><use href="#i-jacket"/></svg><div><h3>Jaquetas</h3><p>Peças de impacto para fechar o look.</p></div></div>
-      <div class="row"><span class="n">Nº05</span><svg class="ic" viewBox="0 0 100 100"><use href="#i-bag"/></svg><div><h3>Acessórios</h3><p>Carteiras, bolsas e os detalhes que fazem diferença.</p></div></div>
+      <div class="row"><span class="n">Nº05</span><svg class="ic" viewBox="0 0 100 100"><use href="#i-shoe"/></svg><div><h3>Calçados</h3><p>Tênis e slip-ons de acabamento impecável.</p></div></div>
+      <div class="row"><span class="n">Nº06</span><svg class="ic" viewBox="0 0 100 100"><use href="#i-bag"/></svg><div><h3>Acessórios</h3><p>Carteiras, bonés e os detalhes que fazem diferença.</p></div></div>
     </div>
   </div>
   <div class="ticker bottom"></div>
 </section>
 
-<!-- 03 · FOTO REAL -->
+<!-- 03 · GRIFES DE PARIS -->
+<section class="slide has-ticker-bottom">
+  <div class="ticker top dark" data-text="AS GRIFES"></div>
+  <div class="meta tl">GMSR — Grifes · I</div>
+  <div class="meta tr counter"></div>
+  <div class="content brands paris">
+    <p class="small accent" style="margin-top:20px">◆ As grifes da maison · França</p>
+    <h1 class="display">Direto de<br><span class="serif accent">Paris.</span></h1>
+    <div class="list">
+      <div class="b"><div><div class="name">Louis Vuitton</div><div class="where">Paris · França</div><div class="item">No acervo: carteira Damier</div></div><div class="year">1854</div></div>
+      <div class="b"><div><div class="name">Saint Laurent</div><div class="where">Paris · França</div><div class="item">No acervo: tricô com assinatura</div></div><div class="year">1961</div></div>
+      <div class="b"><div><div class="name">Maison Margiela</div><div class="where">Paris · França</div><div class="item">No acervo: camiseta Numbers</div></div><div class="year">1988</div></div>
+      <div class="b"><div><div class="name">AMI Paris</div><div class="where">Paris · França</div><div class="item">No acervo: camiseta Ami de Coeur</div></div><div class="year">2011</div></div>
+    </div>
+  </div>
+  <div class="ticker bottom"></div>
+</section>
+
+<!-- 04 · GRIFES DO MUNDO -->
+<section class="slide navy has-ticker-bottom">
+  <div class="ticker top dark" data-text="AS GRIFES"></div>
+  <div class="meta tl">GMSR — Grifes · II</div>
+  <div class="meta tr counter"></div>
+  <div class="content brands world">
+    <p class="small accent" style="margin-top:20px">◆ As grifes da maison · Mundo</p>
+    <h1 class="display" style="font-size:104px">De Milão <span class="serif accent">a Tóquio.</span></h1>
+    <div class="list">
+      <div class="b"><div><div class="name">Zegna</div><div class="where">Trivero · Itália</div><div class="item">Tênis Triple Stitch</div></div><div class="year">1910</div></div>
+      <div class="b"><div><div class="name">Loro Piana</div><div class="where">Quarona · Itália</div><div class="item">Boné</div></div><div class="year">1924</div></div>
+      <div class="b"><div><div class="name">Moncler</div><div class="where">Nasceu na França · hoje em Milão</div><div class="item">Camiseta e jaqueta em tricô com nylon</div></div><div class="year">1952</div></div>
+      <div class="b"><div><div class="name">Ralph Lauren</div><div class="where">Nova York · EUA</div><div class="item">Polo RLX Polo Bear</div></div><div class="year">1967</div></div>
+      <div class="b"><div><div class="name">Comme des Garçons Play</div><div class="where">Tóquio · Japão</div><div class="item">Camiseta Double Heart</div></div><div class="year">2002</div></div>
+      <div class="b"><div><div class="name">Amiri</div><div class="where">Los Angeles · EUA</div><div class="item">Camiseta Arts &amp; Crafts</div></div><div class="year">2014</div></div>
+      <div class="b"><div><div class="name">Nude Project</div><div class="where">Barcelona · Espanha</div><div class="item">Camiseta</div></div><div class="year">2019</div></div>
+    </div>
+  </div>
+  <div class="ticker bottom"></div>
+</section>
+
+<!-- 05 · FOTO REAL -->
 <section class="slide navy has-ticker-bottom">
   <div class="ticker top dark" data-text="FOTO REAL"></div>
   <div class="meta tl">GMSR — Transparência</div>
@@ -125,7 +192,7 @@
   <div class="ticker bottom"></div>
 </section>
 
-<!-- 04 · ENCOMENDAS -->
+<!-- 06 · ENCOMENDAS -->
 <section class="slide has-ticker-bottom">
   <div class="ticker top dark" data-text="ENCOMENDAS"></div>
   <div class="ghost" style="bottom:60px">PROCURA PROCURA</div>
@@ -143,7 +210,7 @@
   <div class="ticker bottom"></div>
 </section>
 
-<!-- 05 · CTA -->
+<!-- 07 · CTA -->
 <section class="slide backdrop cta has-ticker-bottom">
   <div class="meta tl" style="color:var(--paper)">GMSR Maison</div>
   <div class="meta tr counter" style="color:var(--paper)"></div>

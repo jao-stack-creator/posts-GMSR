@@ -10,7 +10,7 @@ Posts de Instagram da **GMSR Maison** ([@gmsr_maison](https://www.instagram.com/
 |---|------|--------|-------|
 | 01 | Sobre a marca | 5 | [`posts/01-sobre-a-marca`](posts/01-sobre-a-marca) |
 | 02 | Envio para todo o Brasil | 4 | [`posts/02-envio-todo-brasil`](posts/02-envio-todo-brasil) |
-| 03 | Nossos produtos | 5 | [`posts/03-produtos`](posts/03-produtos) |
+| 03 | Nossos produtos e grifes | 7 | [`posts/03-produtos`](posts/03-produtos) |
 
 Cada pasta tem:
 - `png/`: as imagens finais em 1080×1350 (4:5), prontas para postar em ordem
