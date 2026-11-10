@@ -1,5 +1,7 @@
 # Grade do perfil · 3 posts que formam uma imagem
 
+**Esquerda:** a loja (100% original, curadoria, foto real) · **Meio:** quem é o dono · **Direita:** envio para todo o Brasil, com o mapa
+
 **Formato:** 3 posts de 1080×1440 (3:4), que lado a lado na grade formam uma arte só
 **Imagens:** `png/slide-01.png` (esquerda), `png/slide-02.png` (meio), `png/slide-03.png` (direita)
 **Prévia:** `previa-grade.png`
@@ -17,7 +19,9 @@ Depois, fixe os três no topo do perfil, nesta mesma ordem, para a arte ficar se
 
 ## Legenda
 
-GMSR Maison. Boutique de peças 100% originais. ◆
+Quem é o dono da GMSR? ◆
+
+Por trás de cada peça da maison existe alguém que escolhe uma a uma, com critério. A GMSR Maison é uma boutique de peças 100% originais, com curadoria peça por peça e foto real de cada item.
 
 Luxury isn't what we sell, it's what you become.
 

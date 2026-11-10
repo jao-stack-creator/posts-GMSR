@@ -21,7 +21,7 @@ const versions = [
     '02-mapa-roxo': 'Mapa do Brasil · roxo',
   } },
   { id: 'grade', name: 'Grade · 3 posts', base: 'posts-grade', ratio: '3/4', titles: {
-    '01-grade-loja': 'A loja, o dono e as informações',
+    '01-grade-loja': 'A loja · Quem é o dono · Envio com mapa',
   } },
 ];
 

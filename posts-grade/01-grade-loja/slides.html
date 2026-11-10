@@ -44,21 +44,42 @@
 
   .logo-s{position:absolute;width:96px;opacity:.9;z-index:3}
   .foot{position:absolute;bottom:80px;font-family:Mono;font-size:18px;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,240,233,.4);z-index:3}
+
+  /* cores GMSR */
+  .slide.tile,.pano,.panel{background:#121A26 !important}
+  .pano:before{content:"";position:absolute;inset:0;background:radial-gradient(40% 50% at 15% 60%,rgba(62,143,203,.18),transparent 70%),radial-gradient(40% 50% at 85% 40%,rgba(62,143,203,.22),transparent 70%);z-index:1}
+  .panel{z-index:1}
+  .panel.l{background:radial-gradient(70% 50% at 30% 65%,rgba(62,143,203,.16),transparent 70%),#121A26 !important}
+  .panel.r{background:radial-gradient(70% 50% at 60% 35%,rgba(62,143,203,.2),transparent 70%),#121A26 !important}
+  .who{position:absolute;left:0;right:0;bottom:150px;text-align:center;z-index:3}
+  .who .k2{font-weight:400;font-size:56px;color:#F3F0E9}
+  .who .t2{font-weight:700;font-size:120px;color:#F3F0E9;margin-top:6px}
+  .who .t2 em{font-style:normal;color:var(--sky)}
+  .who .s2{font-family:Mono;font-size:22px;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,240,233,.75);margin-top:22px}
+  .photo .shade{background:linear-gradient(180deg,rgba(18,26,38,.45),transparent 25%,transparent 50%,rgba(18,26,38,.92)) !important}
+  .mapbox{position:absolute;left:2330px;top:330px;width:660px;height:660px;z-index:3;filter:drop-shadow(0 30px 60px rgba(0,0,0,.5))}
+  .mapa{width:100%;height:100%}
 </style>
 </head>
 <body>
 
 <template id="art">
   <div class="pano">
+    <!-- MEIO: quem é o dono (foto em assets/fotos/dono.jpg) -->
     <div class="photo">
       <img src="../../assets/fotos/dono.jpg" alt="" onerror="this.remove()">
       <div class="ph">
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="50" cy="34" r="16"/><path d="M18 92 Q18 60 50 60 Q82 60 82 92"/></svg>
         <b>FOTO DO DONO</b>
-        <span>Com as peças da maison · 1220 × 1440</span>
+        <span>Com as peças da maison · vertical</span>
       </div>
       <div class="shade"></div>
       <div class="tag">GMSR MAISON</div>
+      <div class="who">
+        <div class="wide k2">Quem é</div>
+        <div class="wide t2">o dono<em>?</em></div>
+        <div class="s2">Fundador · GMSR Maison</div>
+      </div>
     </div>
 
     <div class="panel l"></div>
@@ -68,24 +89,26 @@
     <div class="wide mark r">MAISON</div>
 
     <!-- ESQUERDA: a loja -->
-    <img class="logo-s" src="../../assets/logo/gmsr-mono-branco.png" style="left:90px;top:120px" alt="">
-    <div class="copy wide" style="left:90px;top:760px;width:900px">
+    <img class="logo-s" src="../../assets/logo/gmsr-mono-branco.png" style="left:90px;top:110px" alt="">
+    <div class="copy wide" style="left:90px;top:560px;width:900px">
       <div class="k">Boutique de</div>
       <div class="t">Peças <em>100%</em><br>originais</div>
+      <div class="info">
+        <div><i>◆</i>Curadoria peça por peça</div>
+        <div><i>◆</i>Foto real de cada item</div>
+        <div><i>◆</i>Tags e etiquetas originais</div>
+        <div><i>◆</i>Grifes de Paris a Tóquio</div>
+      </div>
       <div class="q">“Luxury isn't what we sell,<br>it's what you become.”</div>
     </div>
     <div class="foot" style="left:90px">Referência em peças exclusivas</div>
 
-    <!-- DIREITA: informações -->
-    <div class="copy wide" style="left:2290px;top:620px;width:860px">
+    <!-- DIREITA: envio + mapa -->
+    <div class="mapbox"><div class="mapa" data-cores="#8CC8EE,#5FA8DF,#A9D6F3,#3E8FCB" data-fundo="#121A26" data-label="#121A26"></div></div>
+    <div class="copy wide" style="left:2290px;top:1010px;width:860px">
       <div class="k">Enviamos para</div>
-      <div class="t">todo o<br><em>Brasil</em></div>
-      <div class="info">
-        <div><i>◆</i>27 estados · com rastreio</div>
-        <div><i>◆</i>Encomendas sob pedido</div>
-        <div><i>◆</i>Atendimento no Direct</div>
-      </div>
-      <div class="s" style="margin-top:44px">(@gmsr_maison · veja os destaques)</div>
+      <div class="t" style="font-size:74px">todo o <em>Brasil</em></div>
+      <div class="s">27 estados · rastreio · encomendas no Direct</div>
     </div>
     <div class="foot" style="right:90px">Ou é original, ou não é GMSR</div>
   </div>
@@ -95,6 +118,7 @@
 <section class="slide tile"></section>
 <section class="slide tile"></section>
 
+<script src="../../assets/mapa-brasil.js"></script>
 <script>
   // copia a arte contínua para os 3 posts, cada um mostrando um terço
   const art = document.getElementById('art');
@@ -103,5 +127,6 @@
     s.querySelector('.pano').style.left = (-1080 * i) + 'px';
   });
 </script>
+<script src="../../shared/mapa.js"></script>
 </body>
 </html>

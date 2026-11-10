@@ -138,8 +138,8 @@ window.VERSIONS = [
       {
         "n": 1,
         "dir": "01-grade-loja",
-        "title": "A loja, o dono e as informações",
-        "caption": "GMSR Maison. Boutique de peças 100% originais. ◆\n\nLuxury isn't what we sell, it's what you become.\n\n📦 Enviamos para todo o Brasil, com rastreio\n🔎 Encomendas sob pedido\n📩 Atendimento no Direct: @gmsr_maison\n\nOu é original, ou não é GMSR.\n\n.\n.\n.\n#gmsrmaison #100original #boutique #modamasculina #pecasoriginais #luxurystyle",
+        "title": "A loja · Quem é o dono · Envio com mapa",
+        "caption": "Quem é o dono da GMSR? ◆\n\nPor trás de cada peça da maison existe alguém que escolhe uma a uma, com critério. A GMSR Maison é uma boutique de peças 100% originais, com curadoria peça por peça e foto real de cada item.\n\nLuxury isn't what we sell, it's what you become.\n\n📦 Enviamos para todo o Brasil, com rastreio\n🔎 Encomendas sob pedido\n📩 Atendimento no Direct: @gmsr_maison\n\nOu é original, ou não é GMSR.\n\n.\n.\n.\n#gmsrmaison #100original #boutique #modamasculina #pecasoriginais #luxurystyle",
         "slides": [
           "posts-grade/01-grade-loja/previa-grade.png",
           "posts-grade/01-grade-loja/png/slide-01.png",
