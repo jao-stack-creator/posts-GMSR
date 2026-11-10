@@ -20,6 +20,9 @@ const versions = [
     '01-mapa-azul': 'Mapa do Brasil · azul GMSR',
     '02-mapa-roxo': 'Mapa do Brasil · roxo',
   } },
+  { id: 'grade', name: 'Grade · 3 posts', base: 'posts-grade', ratio: '3/4', titles: {
+    '01-grade-loja': 'A loja, o dono e as informações',
+  } },
 ];
 
 const out = versions.filter(v => existsSync(join(root, v.base))).map(v => ({
@@ -28,9 +31,11 @@ const out = versions.filter(v => existsSync(join(root, v.base))).map(v => ({
   posts: readdirSync(join(root, v.base)).sort().filter(d => existsSync(join(root, v.base, d, 'png'))).map((dir, i) => {
     const md = readFileSync(join(root, v.base, dir, 'legenda.md'), 'utf8');
     const caption = (md.split('## Legenda')[1] || '').split('\n---')[0].trim();
-    const slides = readdirSync(join(root, v.base, dir, 'png')).filter(f => f.endsWith('.png')).sort()
+    let slides = readdirSync(join(root, v.base, dir, 'png')).filter(f => f.endsWith('.png')).sort()
       .map(f => `${v.base}/${dir}/png/${f}`);
-    return { n: i + 1, dir, title: v.titles[dir] || dir, caption, slides };
+    const preview = existsSync(join(root, v.base, dir, 'previa-grade.png')) ? `${v.base}/${dir}/previa-grade.png` : null;
+    if (preview) slides = [preview, ...slides];
+    return { n: i + 1, dir, title: v.titles[dir] || dir, caption, slides, ratio: v.ratio || '4/5', preview: !!preview };
   }),
 }));
 

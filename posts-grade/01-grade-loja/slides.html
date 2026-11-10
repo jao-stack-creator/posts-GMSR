@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>GMSR — Grade do perfil · 3 posts que formam uma imagem</title>
+<link rel="stylesheet" href="../../shared/gmsr.css">
+<style>
+  /* Arte contínua de 3240 x 1440: vira 3 posts de 1080 x 1440 (3:4), lado a lado na grade */
+  @font-face{font-family:Wide;src:url(../../assets/fonts/archivo-latin-wdth-normal.woff2);font-weight:100 900;font-stretch:62% 125%}
+  .slide.tile{width:1080px;height:1440px;background:#050608}
+  .pano{position:absolute;top:0;width:3240px;height:1440px;background:#050608;overflow:hidden}
+  .wide{font-family:Wide;font-stretch:125%;text-transform:uppercase;color:#F3F0E9;line-height:.95}
+
+  /* foto do meio (dono com as peças) — passa um pouco para os lados, como na referência */
+  .photo{position:absolute;left:1010px;top:0;width:1220px;height:1440px;overflow:hidden;background:#0d1320}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+    background:radial-gradient(70% 60% at 50% 40%,#22324a 0%,#0d1320 70%);color:rgba(243,240,233,.75);text-align:center}
+  .photo .ph svg{width:260px;height:260px;opacity:.5}
+  .photo .ph b{font-family:Wide;font-stretch:125%;font-weight:700;font-size:40px;letter-spacing:.04em;color:#F3F0E9}
+  .photo .ph span{font-family:Mono;font-size:22px;letter-spacing:.14em;text-transform:uppercase}
+  .photo .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 25%,transparent 70%,rgba(0,0,0,.55))}
+  .photo .tag{position:absolute;left:0;right:0;top:120px;text-align:center;font-family:Wide;font-stretch:125%;font-weight:700;font-size:30px;letter-spacing:.3em;color:rgba(243,240,233,.9)}
+
+  /* painéis pretos da esquerda e da direita */
+  .panel{position:absolute;top:0;height:1440px;background:#050608}
+  .panel.l{left:0;width:1040px}
+  .panel.r{left:2200px;width:1040px}
+
+  /* nome que atravessa a grade */
+  .mark{position:absolute;top:110px;font-weight:500;font-size:150px;letter-spacing:-.01em;z-index:3}
+  .mark.l{right:2200px;text-align:right}   /* termina na borda direita do post da esquerda */
+  .mark.r{left:2200px}                       /* começa na borda esquerda do post da direita */
+
+  .copy{position:absolute;z-index:3}
+  .copy .k{font-weight:400;font-size:54px}
+  .copy .t{font-weight:600;font-size:98px;margin-top:10px;line-height:1.08}
+  .copy .t em{font-style:normal;color:var(--sky)}
+  .copy .q{font-family:Wide;font-stretch:110%;font-weight:400;font-size:28px;line-height:1.3;color:rgba(243,240,233,.85);margin-top:70px;text-transform:uppercase}
+  .copy .s{font-family:Mono;font-size:20px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,240,233,.6);margin-top:18px}
+  .info{display:flex;flex-direction:column;gap:18px;margin-top:64px}
+  .info div{display:flex;gap:18px;align-items:baseline;font-family:Mono;font-size:23px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,240,233,.85)}
+  .info i{font-style:normal;color:var(--sky)}
+
+  .logo-s{position:absolute;width:96px;opacity:.9;z-index:3}
+  .foot{position:absolute;bottom:80px;font-family:Mono;font-size:18px;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,240,233,.4);z-index:3}
+</style>
+</head>
+<body>
+
+<template id="art">
+  <div class="pano">
+    <div class="photo">
+      <img src="../../assets/fotos/dono.jpg" alt="" onerror="this.remove()">
+      <div class="ph">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="50" cy="34" r="16"/><path d="M18 92 Q18 60 50 60 Q82 60 82 92"/></svg>
+        <b>FOTO DO DONO</b>
+        <span>Com as peças da maison · 1220 × 1440</span>
+      </div>
+      <div class="shade"></div>
+      <div class="tag">GMSR MAISON</div>
+    </div>
+
+    <div class="panel l"></div>
+    <div class="panel r"></div>
+
+    <div class="wide mark l">GMSR</div>
+    <div class="wide mark r">MAISON</div>
+
+    <!-- ESQUERDA: a loja -->
+    <img class="logo-s" src="../../assets/logo/gmsr-mono-branco.png" style="left:90px;top:120px" alt="">
+    <div class="copy wide" style="left:90px;top:760px;width:900px">
+      <div class="k">Boutique de</div>
+      <div class="t">Peças <em>100%</em><br>originais</div>
+      <div class="q">“Luxury isn't what we sell,<br>it's what you become.”</div>
+    </div>
+    <div class="foot" style="left:90px">Referência em peças exclusivas</div>
+
+    <!-- DIREITA: informações -->
+    <div class="copy wide" style="left:2290px;top:620px;width:860px">
+      <div class="k">Enviamos para</div>
+      <div class="t">todo o<br><em>Brasil</em></div>
+      <div class="info">
+        <div><i>◆</i>27 estados · com rastreio</div>
+        <div><i>◆</i>Encomendas sob pedido</div>
+        <div><i>◆</i>Atendimento no Direct</div>
+      </div>
+      <div class="s" style="margin-top:44px">(@gmsr_maison · veja os destaques)</div>
+    </div>
+    <div class="foot" style="right:90px">Ou é original, ou não é GMSR</div>
+  </div>
+</template>
+
+<section class="slide tile"></section>
+<section class="slide tile"></section>
+<section class="slide tile"></section>
+
+<script>
+  // copia a arte contínua para os 3 posts, cada um mostrando um terço
+  const art = document.getElementById('art');
+  document.querySelectorAll('.slide.tile').forEach((s, i) => {
+    s.append(art.content.cloneNode(true));
+    s.querySelector('.pano').style.left = (-1080 * i) + 'px';
+  });
+</script>
+</body>
+</html>

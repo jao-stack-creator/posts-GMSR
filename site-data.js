@@ -15,7 +15,9 @@ window.VERSIONS = [
           "posts/01-sobre-a-marca/png/slide-03.png",
           "posts/01-sobre-a-marca/png/slide-04.png",
           "posts/01-sobre-a-marca/png/slide-05.png"
-        ]
+        ],
+        "ratio": "4/5",
+        "preview": false
       },
       {
         "n": 2,
@@ -27,7 +29,9 @@ window.VERSIONS = [
           "posts/02-envio-todo-brasil/png/slide-02.png",
           "posts/02-envio-todo-brasil/png/slide-03.png",
           "posts/02-envio-todo-brasil/png/slide-04.png"
-        ]
+        ],
+        "ratio": "4/5",
+        "preview": false
       },
       {
         "n": 3,
@@ -42,7 +46,9 @@ window.VERSIONS = [
           "posts/03-produtos/png/slide-05.png",
           "posts/03-produtos/png/slide-06.png",
           "posts/03-produtos/png/slide-07.png"
-        ]
+        ],
+        "ratio": "4/5",
+        "preview": false
       }
     ]
   },
@@ -61,7 +67,9 @@ window.VERSIONS = [
           "posts-v2/01-sobre-a-marca/png/slide-03.png",
           "posts-v2/01-sobre-a-marca/png/slide-04.png",
           "posts-v2/01-sobre-a-marca/png/slide-05.png"
-        ]
+        ],
+        "ratio": "4/5",
+        "preview": false
       },
       {
         "n": 2,
@@ -74,7 +82,9 @@ window.VERSIONS = [
           "posts-v2/02-envio-todo-brasil/png/slide-03.png",
           "posts-v2/02-envio-todo-brasil/png/slide-04.png",
           "posts-v2/02-envio-todo-brasil/png/slide-05.png"
-        ]
+        ],
+        "ratio": "4/5",
+        "preview": false
       },
       {
         "n": 3,
@@ -87,7 +97,9 @@ window.VERSIONS = [
           "posts-v2/03-produtos/png/slide-03.png",
           "posts-v2/03-produtos/png/slide-04.png",
           "posts-v2/03-produtos/png/slide-05.png"
-        ]
+        ],
+        "ratio": "4/5",
+        "preview": false
       }
     ]
   },
@@ -102,7 +114,9 @@ window.VERSIONS = [
         "caption": "Do Oiapoque ao Chuí: a GMSR chega até você. 🇧🇷\n\nNão importa a distância: sua peça original chega com segurança, cuidado e código de rastreio, em qualquer um dos 27 estados do Brasil.\n\n📦 Veja as entregas no destaque *Encomendas*\n📩 Peça pelo Direct: @gmsr_maison\n\nOu é original, ou não é GMSR. ◆\n\n.\n.\n.\n#gmsrmaison #enviamosparatodoobrasil #100original #boutique #modamasculina #pecasoriginais",
         "slides": [
           "posts-extra/01-mapa-azul/png/slide-01.png"
-        ]
+        ],
+        "ratio": "4/5",
+        "preview": false
       },
       {
         "n": 2,
@@ -111,7 +125,29 @@ window.VERSIONS = [
         "caption": "Do Oiapoque ao Chuí: a GMSR chega até você. 🇧🇷\n\nNão importa a distância: sua peça original chega com segurança, cuidado e código de rastreio, em qualquer um dos 27 estados do Brasil.\n\n📦 Veja as entregas no destaque *Encomendas*\n📩 Peça pelo Direct: @gmsr_maison\n\nOu é original, ou não é GMSR. ◆\n\n.\n.\n.\n#gmsrmaison #enviamosparatodoobrasil #100original #boutique #modamasculina #pecasoriginais",
         "slides": [
           "posts-extra/02-mapa-roxo/png/slide-01.png"
-        ]
+        ],
+        "ratio": "4/5",
+        "preview": false
+      }
+    ]
+  },
+  {
+    "id": "grade",
+    "name": "Grade · 3 posts",
+    "posts": [
+      {
+        "n": 1,
+        "dir": "01-grade-loja",
+        "title": "A loja, o dono e as informações",
+        "caption": "GMSR Maison. Boutique de peças 100% originais. ◆\n\nLuxury isn't what we sell, it's what you become.\n\n📦 Enviamos para todo o Brasil, com rastreio\n🔎 Encomendas sob pedido\n📩 Atendimento no Direct: @gmsr_maison\n\nOu é original, ou não é GMSR.\n\n.\n.\n.\n#gmsrmaison #100original #boutique #modamasculina #pecasoriginais #luxurystyle",
+        "slides": [
+          "posts-grade/01-grade-loja/previa-grade.png",
+          "posts-grade/01-grade-loja/png/slide-01.png",
+          "posts-grade/01-grade-loja/png/slide-02.png",
+          "posts-grade/01-grade-loja/png/slide-03.png"
+        ],
+        "ratio": "3/4",
+        "preview": true
       }
     ]
   }

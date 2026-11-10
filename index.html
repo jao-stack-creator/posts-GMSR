@@ -57,7 +57,7 @@
   .ig-top span{margin-left:auto;font-size:20px;opacity:.8}
   .stage{position:relative;aspect-ratio:4/5;overflow:hidden;background:#0b0f16;touch-action:pan-y}
   .track{display:flex;height:100%;transition:transform .35s ease}
-  .track img{width:100%;height:100%;flex:none;object-fit:cover;user-select:none;-webkit-user-drag:none}
+  .track img{width:100%;height:100%;flex:none;object-fit:contain;background:#000;user-select:none;-webkit-user-drag:none}
   .arrow{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:0;cursor:pointer;
     background:rgba(255,255,255,.85);color:#111;font-size:18px;display:grid;place-items:center}
   .arrow.prev{left:10px}.arrow.next{right:10px}
@@ -156,7 +156,7 @@
 <script>
 const $ = id => document.getElementById(id);
 const versions = window.VERSIONS;
-const vdesc = { v1: 'Identidade azul, tipografia condensada', v2: 'Editorial escuro, com fotos reais do acervo', mapa: 'Imagem única sobre o envio: duas opções de cor' };
+const vdesc = { v1: 'Identidade azul, tipografia condensada', v2: 'Editorial escuro, com fotos reais do acervo', mapa: 'Imagem única sobre o envio: duas opções de cor', grade: 'Três posts que formam uma imagem só na grade do perfil' };
 let v = 0, posts = versions[0].posts, p = 0, s = 0;
 
 $('tk').innerHTML = Array(2).fill(Array(12).fill('<span>GMSR MAISON</span><i>◆</i>').join('')).join('');
@@ -178,11 +178,12 @@ function openPost(i) {
   const x = posts[p];
   history.replaceState(null, '', `#${versions[v].id}-post-${x.n}`);
   [...$('tabs').children].forEach((b, j) => b.setAttribute('aria-selected', j === p));
+  $('stage').style.aspectRatio = x.ratio || '4/5';
   $('track').innerHTML = x.slides.map((src, j) => `<img src="${src}" alt="Post ${x.n}, slide ${j + 1}" ${j ? 'loading="lazy"' : ''}>`).join('');
   $('dots').innerHTML = x.slides.map(() => '<i></i>').join('');
   $('thumbs').innerHTML = x.slides.map((src, j) => `<button data-j="${j}"><img src="${src}" alt="" loading="lazy"></button>`).join('');
   $('title').innerHTML = `Post ${x.n}<em>${x.title}</em>`;
-  $('info').textContent = x.slides.length > 1 ? `Carrossel · ${x.slides.length} slides · 1080 × 1350` : 'Imagem única · 1080 × 1350';
+  $('info').textContent = x.preview ? 'Grade · 3 posts de 1080 × 1440 · o 1º slide é a prévia no perfil' : x.slides.length > 1 ? `Carrossel · ${x.slides.length} slides · 1080 × 1350` : 'Imagem única · 1080 × 1350';
   $('cap').innerHTML = '<b>gmsr_maison</b> ' + x.caption.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\*/g, '');
   $('cap').classList.add('clamp'); $('more').hidden = false;
   go(0);

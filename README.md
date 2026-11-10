@@ -37,6 +37,8 @@ O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site
 
 O mapa (27 estados) vem do Natural Earth, que é domínio público, e fica em `assets/mapa-brasil.js`.
 
+**Grade · 3 posts** (três posts de 1080×1440 que, lado a lado no perfil, formam uma arte só): [`posts-grade/01-grade-loja`](posts-grade/01-grade-loja). A ordem de postagem está no `legenda.md`. Para gerar a prévia lado a lado, rode `python3 scripts/preview-grade.py` depois do render.
+
 As fotos da versão 2 ficam em `assets/fotos/`. Elas foram recortadas dos prints do feed; se tiverem as fotos originais em alta, substituam mantendo os mesmos nomes e rodem `npm run render`. O estilo da versão 2 está em `shared/gmsr-v2.css`.
 
 Cada pasta tem:
