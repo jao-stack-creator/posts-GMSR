@@ -1,0 +1,12 @@
+{
+  "name": "posts-gmsr",
+  "private": true,
+  "type": "module",
+  "description": "Posts de Instagram da GMSR Maison",
+  "scripts": {
+    "render": "node scripts/render.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
+}

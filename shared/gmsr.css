@@ -1,0 +1,75 @@
+/* ==========================================================
+   GMSR Maison — sistema visual dos posts
+   Formato: 1080 x 1350 (4:5, feed / carrossel)
+   ========================================================== */
+@font-face{font-family:Antonio;font-weight:200;src:url(../assets/fonts/antonio-latin-200-normal.woff2)}
+@font-face{font-family:Antonio;font-weight:400;src:url(../assets/fonts/antonio-latin-400-normal.woff2)}
+@font-face{font-family:Antonio;font-weight:700;src:url(../assets/fonts/antonio-latin-700-normal.woff2)}
+@font-face{font-family:Bodoni;font-weight:400;src:url(../assets/fonts/bodoni-moda-latin-400-normal.woff2)}
+@font-face{font-family:Bodoni;font-weight:400;font-style:italic;src:url(../assets/fonts/bodoni-moda-latin-400-italic.woff2)}
+@font-face{font-family:Bodoni;font-weight:600;font-style:italic;src:url(../assets/fonts/bodoni-moda-latin-600-italic.woff2)}
+@font-face{font-family:Inter;font-weight:400;src:url(../assets/fonts/inter-latin-400-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../assets/fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:800;src:url(../assets/fonts/inter-latin-800-normal.woff2)}
+@font-face{font-family:Mono;font-weight:400;src:url(../assets/fonts/ibm-plex-mono-latin-400-normal.woff2)}
+
+:root{
+  --navy:#32445C;      /* cor do logo */
+  --ink:#121A26;       /* fundo escuro principal */
+  --ink-2:#1A2434;
+  --sky:#8CC8EE;       /* azul de destaque (vem do fundo das fotos) */
+  --sky-deep:#3E8FCB;
+  --paper:#F3F0E9;     /* branco quente */
+  --line:rgba(243,240,233,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0b0f16;display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px 0;font-family:Inter,sans-serif;color:var(--paper)}
+
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--ink);flex:none}
+.slide.navy{background:var(--navy)}
+.slide.paper{background:var(--paper);color:var(--ink)}
+
+/* fundo azul texturizado (mesmo clima do fundo das fotos do feed) */
+.slide.backdrop{background:radial-gradient(120% 90% at 30% 20%,#79BDEB 0%,#3F8DCB 45%,#24619D 100%)}
+.texture{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:soft-light;opacity:.9;pointer-events:none}
+.vignette{position:absolute;inset:0;background:radial-gradient(90% 80% at 50% 45%,transparent 40%,rgba(10,20,40,.55) 100%);pointer-events:none}
+
+/* faixa repetida com o nome (topo/base) */
+.ticker{position:absolute;left:0;right:0;height:58px;display:flex;align-items:center;white-space:nowrap;overflow:hidden;
+  font-family:Antonio;font-weight:700;font-size:30px;letter-spacing:.12em;background:var(--paper);color:var(--ink);z-index:5}
+.ticker.top{top:0}.ticker.bottom{bottom:0}
+.ticker.dark{background:var(--ink);color:var(--paper)}
+.ticker span{padding:0 18px}
+.ticker i{font-style:normal;color:var(--sky-deep);font-size:20px}
+.ticker.dark i{color:var(--sky)}
+
+/* metadados em mono (cantos) */
+.meta{position:absolute;font-family:Mono;font-size:19px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;z-index:6}
+.meta.tl{top:92px;left:72px}.meta.tr{top:92px;right:72px;text-align:right}
+.meta.bl{bottom:64px;left:72px}.meta.br{bottom:64px;right:72px;text-align:right}
+.has-ticker-bottom .meta.bl,.has-ticker-bottom .meta.br{bottom:96px}
+
+/* tipografia */
+.display{font-family:Antonio;font-weight:700;text-transform:uppercase;line-height:1;letter-spacing:-.005em}
+.thin{font-family:Antonio;font-weight:200;text-transform:uppercase;letter-spacing:.04em}
+.serif{font-family:Bodoni;font-style:italic;font-weight:400;text-transform:none;letter-spacing:0}
+.accent{color:var(--sky)}
+.paper .accent{color:var(--sky-deep)}
+.hl{background:var(--sky);color:var(--ink);padding:0 .14em;display:inline-block;line-height:.95;margin-top:.06em}
+.body{font-family:Inter;font-size:31px;line-height:1.45;font-weight:400;color:rgba(243,240,233,.86)}
+.body b{color:var(--paper);font-weight:600}
+.small{font-family:Mono;font-size:20px;letter-spacing:.1em;text-transform:uppercase}
+
+.content{position:absolute;inset:0;padding:150px 72px 130px;display:flex;flex-direction:column;z-index:3}
+
+/* palavra gigante vazada ao fundo */
+.ghost{position:absolute;left:-40px;white-space:nowrap;font-family:Antonio;font-weight:700;text-transform:uppercase;
+  font-size:330px;line-height:.85;color:transparent;-webkit-text-stroke:2px rgba(243,240,233,.12);z-index:1}
+
+.rule{height:1px;background:var(--line);width:100%}
+.diamond{display:inline-block;width:20px;height:20px;border:2.5px solid currentColor;transform:rotate(45deg);flex:none}
+.diamond.fill{background:currentColor}
+
+.swipe{display:flex;align-items:center;gap:16px;font-family:Antonio;font-weight:700;font-size:30px;letter-spacing:.14em;text-transform:uppercase}
+.swipe svg{width:64px;height:24px}
+.logo{display:block}
