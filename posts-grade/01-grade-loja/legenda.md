@@ -13,7 +13,7 @@
 
 Depois, fixe os três no topo do perfil, nesta mesma ordem, para a arte ficar sempre na primeira linha.
 
-**Falta:** a foto do dono com as peças, no meio. Coloque a foto em `assets/fotos/dono.jpg` (vertical, de preferência 1220×1440 ou maior) e rode `npm run render`.
+**Fotos:** `assets/fotos/dono.jpg` (meio) e `assets/fotos/acervo-mesa.jpg` (esquerda). Para trocar, substitua os arquivos mantendo os nomes e rode `npm run render`.
 
 ---
 
