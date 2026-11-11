@@ -77,7 +77,7 @@
   .thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;margin-top:28px}
   .thumbs button{all:unset;cursor:pointer;aspect-ratio:4/5;outline:2px solid transparent;outline-offset:2px;transition:.15s}
   .thumbs button.on{outline-color:var(--sky)}
-  .thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+  .thumbs img{width:100%;height:100%;object-fit:contain;background:#000;display:block}
   .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
   .btn{all:unset;cursor:pointer;font-family:Antonio;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:17px;
     padding:13px 20px;border:1px solid var(--paper)}
@@ -156,7 +156,7 @@
 <script>
 const $ = id => document.getElementById(id);
 const versions = window.VERSIONS;
-const vdesc = { v1: 'Azul GMSR, tipografia condensada', v2: 'Editorial escuro com polaroids', v3: 'Noir, fonte larga e fotos grandes' };
+const vdesc = {};
 let v = 0, posts = versions[0].posts, p = 0, s = 0;
 
 $('tk').innerHTML = Array(2).fill(Array(12).fill('<span>GMSR MAISON</span><i>◆</i>').join('')).join('');
@@ -171,6 +171,7 @@ function openVersion(i, keep) {
     `<button role="tab" data-i="${k}">Post ${x.n}<small>${x.title}</small></button>`).join('');
   openPost(Math.min(keep || 0, posts.length - 1));
 }
+if (versions.length < 2) document.querySelector('.versions').style.display = 'none';
 $('tabs').onclick = e => { const b = e.target.closest('button'); if (b) openPost(+b.dataset.i); };
 
 function openPost(i) {

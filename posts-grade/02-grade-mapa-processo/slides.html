@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>GMSR — Grade · Mapa | Marca + Processo</title>
+<link rel="stylesheet" href="../../shared/gmsr.css">
+<style>
+  /* 3 posts de 1080 x 1440 (3:4). Esquerda: post do mapa, sozinho.
+     Meio + direita: uma arte contínua de 2160 x 1440. */
+  @font-face{font-family:Wide;src:url(../../assets/fonts/archivo-latin-wdth-normal.woff2);font-weight:100 900;font-stretch:62% 125%}
+  .slide.tile{width:1080px;height:1440px;background:#0B111B}
+  .w{font-family:Wide;font-stretch:125%;text-transform:uppercase;line-height:1;color:#F3F0E9}
+  .w em{font-style:normal;color:var(--sky)}
+  .mono{font-family:Mono;letter-spacing:.14em;text-transform:uppercase}
+
+  /* ---------- ESQUERDA: mapa ---------- */
+  .solo{position:absolute;inset:0;background:radial-gradient(60% 45% at 50% 48%,rgba(62,143,203,.28),transparent 70%),#0B111B}
+  .solo .logo{position:absolute;left:80px;top:80px;width:96px}
+  .solo .tag{position:absolute;right:80px;top:112px;font-size:18px;color:rgba(243,240,233,.55)}
+  .solo .map{position:absolute;left:110px;top:200px;width:860px;height:860px;filter:drop-shadow(0 30px 60px rgba(0,0,0,.55))}
+  .solo .map .mapa{width:100%;height:100%}
+  .solo .t{position:absolute;left:80px;right:80px;top:1080px}
+  .solo .t .k{font-weight:400;font-size:46px}
+  .solo .t .h{font-weight:700;font-size:96px;margin-top:8px}
+  .solo .t .s{font-size:19px;color:rgba(243,240,233,.6);margin-top:26px}
+
+  /* ---------- MEIO + DIREITA: arte contínua ---------- */
+  .pano{position:absolute;top:0;width:2160px;height:1440px;background:
+    radial-gradient(40% 55% at 75% 45%,rgba(62,143,203,.22),transparent 70%),#0B111B;overflow:hidden}
+  .pano .photo{position:absolute;left:0;top:0;width:1180px;height:1440px;overflow:hidden}
+  .pano .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:saturate(.85) contrast(1.05)}
+  .pano .photo:after{content:"";position:absolute;inset:0;background:
+    linear-gradient(90deg,transparent 55%,#0B111B 100%),
+    linear-gradient(180deg,rgba(11,17,27,.55),transparent 22%,transparent 60%,rgba(11,17,27,.95))}
+  .pano .word{position:absolute;top:96px;font-weight:600;font-size:150px;z-index:3}
+  .pano .word.a{right:1110px}            /* "GMSR" termina na borda do post do meio */
+  .pano .word.b{left:1110px}             /* "MAISON" começa no post da direita */
+  .pano .who{position:absolute;left:80px;bottom:110px;z-index:3}
+  .pano .who .k{font-weight:400;font-size:46px}
+  .pano .who .h{font-weight:700;font-size:104px;margin-top:6px}
+  .pano .who .s{font-size:19px;color:rgba(243,240,233,.7);margin-top:22px}
+
+  .pano .route{position:absolute;inset:0;z-index:2;pointer-events:none}
+
+  .pano .steps{position:absolute;left:1230px;top:430px;width:860px;z-index:3}
+  .pano .steps .kick{font-size:20px;color:var(--sky)}
+  .pano .steps .h{font-weight:600;font-size:64px;margin-top:18px;line-height:1.08}
+  .pano .row{display:grid;grid-template-columns:92px 1fr;gap:18px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(243,240,233,.16)}
+  .pano .row:last-child{border-bottom:1px solid rgba(243,240,233,.16)}
+  .pano .row .n{font-family:Wide;font-stretch:125%;font-weight:700;font-size:44px;color:var(--sky)}
+  .pano .row b{font-family:Wide;font-stretch:125%;font-weight:600;font-size:28px;text-transform:uppercase;color:#F3F0E9;display:block}
+  .pano .row p{font-family:Inter;font-size:23px;color:rgba(243,240,233,.72);margin-top:6px}
+  .pano .cta{position:absolute;left:1230px;bottom:110px;z-index:3;font-size:19px;color:rgba(243,240,233,.7)}
+  .pano .cta em{font-style:normal;color:var(--sky)}
+</style>
+</head>
+<body>
+
+<!-- POST DA ESQUERDA · mapa (funciona sozinho) -->
+<section class="slide tile">
+  <div class="solo">
+    <img class="logo" src="../../assets/logo/gmsr-mono-branco.png" alt="">
+    <div class="tag mono">@gmsr_maison</div>
+    <div class="map"><div class="mapa" data-cores="#8CC8EE,#5FA8DF,#A9D6F3,#3E8FCB" data-fundo="#0B111B" data-label="#0B111B"></div></div>
+    <div class="t">
+      <div class="w k">Enviamos para</div>
+      <div class="w h">todo o <em>Brasil</em></div>
+      <div class="mono s">27 estados · com rastreio · do Oiapoque ao Chuí</div>
+    </div>
+  </div>
+</section>
+
+<template id="art">
+  <div class="pano">
+    <div class="photo"><img src="../../assets/fotos/dono.jpg" alt=""></div>
+
+    <!-- rota tracejada que liga o meio à direita -->
+    <svg class="route" viewBox="0 0 2160 1440">
+      <path d="M900 1240 C 1060 1220, 1020 760, 1160 560" fill="none" stroke="#8CC8EE" stroke-width="4" stroke-dasharray="4 16" stroke-linecap="round"/>
+      <circle cx="900" cy="1240" r="12" fill="#8CC8EE"/>
+      <rect x="1146" y="546" width="28" height="28" fill="#8CC8EE" transform="rotate(45 1160 560)"/>
+    </svg>
+
+    <div class="w word a">GMSR</div>
+    <div class="w word b">MAISON</div>
+
+    <!-- MEIO -->
+    <div class="who">
+      <div class="w k">Quem é</div>
+      <div class="w h">o dono<em>?</em></div>
+      <div class="mono s">Fundador · atendimento direto</div>
+    </div>
+
+    <!-- DIREITA -->
+    <div class="steps">
+      <div class="mono kick">◆ Como funciona</div>
+      <div class="w h">Do pedido<br>à sua <em>porta.</em></div>
+      <div style="margin-top:40px">
+        <div class="row"><span class="n">01</span><div><b>Referência</b><p>Você envia a foto ou o nome da peça.</p></div></div>
+        <div class="row"><span class="n">02</span><div><b>Seleção</b><p>Selecionamos a peça a dedo com o nosso fornecedor.</p></div></div>
+        <div class="row"><span class="n">03</span><div><b>Conferência</b><p>Recebemos o vídeo da peça e conferimos cada detalhe.</p></div></div>
+        <div class="row"><span class="n">04</span><div><b>Aprovação</b><p>Você recebe fotos e vídeos para aprovar.</p></div></div>
+        <div class="row"><span class="n">05</span><div><b>Entrega</b><p>Aprovou? A peça chega na sua casa, com rastreio.</p></div></div>
+      </div>
+    </div>
+    <div class="cta mono">Chame no Direct · <em>@gmsr_maison</em></div>
+  </div>
+</template>
+
+<section class="slide tile"></section>
+<section class="slide tile"></section>
+
+<script src="../../assets/mapa-brasil.js"></script>
+<script>
+  const art = document.getElementById('art');
+  document.querySelectorAll('.slide.tile:not(:first-of-type)').forEach((s, i) => {
+    s.append(art.content.cloneNode(true));
+    s.querySelector('.pano').style.left = (-1080 * i) + 'px';
+  });
+</script>
+<script src="../../shared/mapa.js"></script>
+</body>
+</html>

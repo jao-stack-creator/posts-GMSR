@@ -6,20 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const versions = [
-  { id: 'v1', name: 'Versão 1', items: [
-    { base: 'posts', dir: '01-sobre-a-marca', title: 'A marca e o dono' },
-    { base: 'posts', dir: '02-envio-todo-brasil', title: 'Encomenda e envio' },
-    { base: 'posts', dir: '03-produtos', title: 'O acervo' },
-  ] },
-  { id: 'v2', name: 'Versão 2', items: [
-    { base: 'posts-v2', dir: '01-sobre-a-marca', title: 'A marca e o dono' },
-    { base: 'posts-v2', dir: '02-envio-todo-brasil', title: 'Encomenda e envio' },
-    { base: 'posts-v2', dir: '03-produtos', title: 'O acervo' },
-  ] },
-  { id: 'v3', name: 'Versão 3', items: [
-    { base: 'posts-v3', dir: '01-marca', title: 'A marca e o dono' },
-    { base: 'posts-v3', dir: '02-encomenda', title: 'Encomenda e envio' },
-    { base: 'posts-v3', dir: '03-acervo', title: 'O acervo' },
+  { id: 'grade', name: 'Grade do perfil', items: [
+    { base: 'posts-grade', dir: '02-grade-mapa-processo', title: 'Mapa · Quem é o dono · Como funciona', ratio: '3/4' },
   ] },
 ];
 

@@ -12,19 +12,9 @@ O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site
 
 ## Posts
 
-São **3 posts** (A marca e o dono · Encomenda e envio · O acervo), cada um com pelo menos 5 slides, em **3 versões** de visual. No site, escolha a versão e depois o post.
+O site mostra a **grade do perfil** [`posts-grade/02-grade-mapa-processo`](posts-grade/02-grade-mapa-processo): o mapa na esquerda (sozinho) e, no meio e na direita, uma arte contínua com "Quem é o dono?" e "Como funciona". A ordem de postagem está no `legenda.md`.
 
-| Versão | Visual | Post 1 · A marca e o dono | Post 2 · Encomenda e envio | Post 3 · O acervo |
-|---|---|---|---|---|
-| 1 | Azul GMSR, tipografia condensada | [`posts/01-sobre-a-marca`](posts/01-sobre-a-marca) (6) | [`posts/02-envio-todo-brasil`](posts/02-envio-todo-brasil) (5) | [`posts/03-produtos`](posts/03-produtos) (7) |
-| 2 | Editorial escuro com polaroids | [`posts-v2/01-sobre-a-marca`](posts-v2/01-sobre-a-marca) (6) | [`posts-v2/02-envio-todo-brasil`](posts-v2/02-envio-todo-brasil) (6) | [`posts-v2/03-produtos`](posts-v2/03-produtos) (5) |
-| 3 | Noir, fonte larga e fotos grandes | [`posts-v3/01-marca`](posts-v3/01-marca) (5) | [`posts-v3/02-encomenda`](posts-v3/02-encomenda) (5) | [`posts-v3/03-acervo`](posts-v3/03-acervo) (5) |
-
-Cada pasta tem `png/` (imagens prontas, em ordem), `legenda.md` e `slides.html` (fonte editável).
-
-Fotos em `assets/fotos/` (peças, `dono.jpg` e `acervo-mesa.jpg`). O mapa (Natural Earth, domínio público) fica em `assets/mapa-brasil.js`.
-
-Rascunhos que saíram do site, mas continuam no repositório: `posts-extra/` (mapa em imagem única) e `posts-grade/` (grade de 3 posts "Quem é o dono").
+Os posts não citam nomes de marcas nem afirmam originalidade. As pastas `posts/`, `posts-v2/`, `posts-v3/`, `posts-extra/` e `posts-grade/01-grade-loja` são rascunhos antigos e não aparecem no site.
 
 ## Identidade visual
 
