@@ -1,7 +1,7 @@
 # Carrossel · Quem é o dono (post do meio da grade)
 
-**Formato:** carrossel, 5 slides (1080×1440, 3:4)
-**Imagens:** `png/slide-01.png` … `png/slide-05.png`
+**Formato:** carrossel, 2 slides (1080×1440, 3:4)
+**Imagens:** `png/slide-01.png` (pergunta) e `png/slide-02.png` (a foto dele)
 
 O slide 1 é o post do meio da grade. Use este carrossel **no lugar** dele: no perfil aparece só o slide 1, então a arte continua ligada com o post da direita.
 

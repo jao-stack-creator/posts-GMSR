@@ -108,12 +108,14 @@
   .pill3 p{font-family:Inter;font-size:24px;color:rgba(243,240,233,.72);margin-top:6px}
   .side{position:absolute;right:80px;top:330px;width:440px;height:900px;overflow:hidden;border:1px solid rgba(243,240,233,.16);z-index:3}
   .side img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+  .pano .photo{background:radial-gradient(55% 45% at 50% 45%,rgba(62,143,203,.32),transparent 70%),#0B111B}
+  .pano .ask{position:absolute;left:0;width:1080px;top:170px;text-align:center;font-family:Wide;font-stretch:125%;font-weight:800;font-size:1000px;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(140,200,238,.45)}
 </style>
 </head>
 <body>
 <template id="art">
   <div class="pano">
-    <div class="photo"><img src="../../assets/fotos/dono.jpg" alt=""></div>
+    <div class="photo"><div class="ask">?</div></div>
 
     <!-- rota tracejada que liga o meio à direita -->
     <svg class="route" viewBox="0 0 2160 1440">
@@ -164,42 +166,6 @@
     </div>
   </div>
   <div class="foot mono"><span>15°47′ S · 47°52′ O</span><span>Deslize →</span></div>
-</div></section>
-
-<!-- 03 · DE BRASÍLIA -->
-<section class="slide tile"><div class="c3"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
-  <div class="big">BSB</div><div class="lbl mono">A origem</div>
-  <div class="body" style="top:600px;right:560px">
-    <div class="w h" style="font-size:62px">De Brasília<br>para o <em>Brasil.</em></div>
-    <p>Com <b>18 anos</b>, ele criou a GMSR para levar peças escolhidas a dedo para quem gosta de se vestir bem, <b>em qualquer lugar do país.</b></p>
-  </div>
-  <div class="side"><img src="../../assets/fotos/dono-2.jpg" alt=""></div>
-  <div class="foot mono"><span>Brasília · DF</span><span>Deslize →</span></div>
-</div></section>
-
-<!-- 04 · O QUE ELE GARANTE -->
-<section class="slide tile"><div class="c3"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
-  <div class="body" style="top:330px">
-    <div class="mono" style="font-size:20px;color:var(--sky)">◆ O compromisso</div>
-    <div class="w h" style="margin-top:20px;font-size:66px">Quem escolhe<br>é <em>quem atende.</em></div>
-    <div class="pill3">
-      <div><i>01</i><span><b>Curadoria</b><p>Cada peça é escolhida a dedo, uma a uma.</p></span></div>
-      <div><i>02</i><span><b>Transparência</b><p>Você vê fotos e vídeos da sua peça antes do envio.</p></span></div>
-      <div><i>03</i><span><b>Atendimento</b><p>Direto no Direct, do primeiro “oi” até a entrega.</p></span></div>
-    </div>
-  </div>
-  <div class="foot mono"><span>GMSR Maison</span><span>Deslize →</span></div>
-</div></section>
-
-<!-- 05 · FINAL -->
-<section class="slide tile"><div class="c3" style="background:radial-gradient(60% 45% at 50% 45%,rgba(62,143,203,.3),transparent 70%),#0B111B"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
-  <div style="position:absolute;left:90px;right:90px;top:360px;text-align:center;z-index:3">
-    <img src="../../assets/logo/gmsr-mono-branco.png" style="width:220px" alt="">
-    <p class="quote" style="margin-top:60px">“Luxury isn't what we sell,<br><em>it's what you become.”</em></p>
-    <p class="mono" style="font-size:19px;color:rgba(243,240,233,.6);margin-top:30px">Fundador · GMSR Maison</p>
-    <div class="mono" style="display:inline-block;margin-top:60px;background:#F3F0E9;color:#0B111B;padding:22px 40px;font-size:24px">Fale com ele · @gmsr_maison</div>
-  </div>
-  <div class="foot mono"><span>Brasília · DF</span><span><em>Envio para todo o Brasil</em></span></div>
 </div></section>
 
 <script>

@@ -52,6 +52,8 @@
   .pano .row p{font-family:Inter;font-size:23px;color:rgba(243,240,233,.72);margin-top:6px}
   .pano .cta{position:absolute;left:1230px;bottom:110px;z-index:3;font-size:19px;color:rgba(243,240,233,.7)}
   .pano .cta em{font-style:normal;color:var(--sky)}
+  .pano .photo{background:radial-gradient(55% 45% at 50% 45%,rgba(62,143,203,.32),transparent 70%),#0B111B}
+  .pano .ask{position:absolute;left:0;width:1080px;top:170px;text-align:center;font-family:Wide;font-stretch:125%;font-weight:800;font-size:1000px;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(140,200,238,.45)}
 </style>
 </head>
 <body>
@@ -72,7 +74,7 @@
 
 <template id="art">
   <div class="pano">
-    <div class="photo"><img src="../../assets/fotos/dono.jpg" alt=""></div>
+    <div class="photo"><div class="ask">?</div></div>
 
     <!-- rota tracejada que liga o meio à direita -->
     <svg class="route" viewBox="0 0 2160 1440">
