@@ -1,7 +1,7 @@
 # Carrossel · Como funciona (post da direita da grade)
 
-**Formato:** carrossel, 7 slides (1080×1440, 3:4)
-**Imagens:** `png/slide-01.png` … `png/slide-07.png`
+**Formato:** carrossel, 6 slides (1080×1440, 3:4)
+**Imagens:** `png/slide-01.png` … `png/slide-06.png`
 
 O slide 1 é o mesmo post da direita da grade (`posts-grade/02-grade-mapa-processo/png/slide-03.png`). Use este carrossel **no lugar** dele: na grade do perfil aparece só o slide 1, então a arte continua conectada com o post do meio.
 

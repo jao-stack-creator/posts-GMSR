@@ -29,8 +29,7 @@ window.VERSIONS = [
           "posts-grade/03-carrossel-processo/png/slide-03.png",
           "posts-grade/03-carrossel-processo/png/slide-04.png",
           "posts-grade/03-carrossel-processo/png/slide-05.png",
-          "posts-grade/03-carrossel-processo/png/slide-06.png",
-          "posts-grade/03-carrossel-processo/png/slide-07.png"
+          "posts-grade/03-carrossel-processo/png/slide-06.png"
         ],
         "ratio": "3/4",
         "preview": false
