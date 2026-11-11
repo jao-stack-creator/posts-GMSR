@@ -7,16 +7,13 @@ window.VERSIONS = [
       {
         "n": 1,
         "dir": "posts-grade/02-grade-mapa-processo",
-        "title": "Grade do perfil",
-        "caption": "Do pedido à sua porta. ◆\n\n1️⃣ Você envia a foto ou o nome da peça\n2️⃣ Selecionamos a peça a dedo com o nosso fornecedor\n3️⃣ Recebemos o vídeo da peça e conferimos cada detalhe\n4️⃣ Você recebe fotos e vídeos para aprovar\n5️⃣ Aprovou? A peça chega na sua casa, com rastreio\n\n📦 Enviamos para todo o Brasil\n📩 Chame no Direct: @gmsr_maison\n\n.\n.\n.\n#gmsrmaison #boutique #modamasculina #enviamosparatodoobrasil #encomendas",
+        "title": "Enviamos para todo o Brasil",
+        "caption": "Enviamos para todo o Brasil. 🇧🇷\n\nDo Oiapoque ao Chuí, nos 27 estados, com código de rastreio. Onde você estiver, a GMSR chega.\n\n📩 Peça pelo Direct: @gmsr_maison\n\n.\n.\n.\n#gmsrmaison #enviamosparatodoobrasil #boutique #modamasculina",
         "slides": [
-          "posts-grade/02-grade-mapa-processo/previa-grade.png",
-          "posts-grade/02-grade-mapa-processo/png/slide-01.png",
-          "posts-grade/02-grade-mapa-processo/png/slide-02.png",
-          "posts-grade/02-grade-mapa-processo/png/slide-03.png"
+          "posts-grade/02-grade-mapa-processo/png/slide-01.png"
         ],
         "ratio": "3/4",
-        "preview": true
+        "preview": false
       },
       {
         "n": 2,

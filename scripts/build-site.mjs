@@ -7,18 +7,19 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const versions = [
   { id: 'grade', name: 'Grade do perfil', items: [
-    { base: 'posts-grade', dir: '02-grade-mapa-processo', title: 'Grade do perfil', ratio: '3/4' },
+    { base: 'posts-grade', dir: '02-grade-mapa-processo', title: 'Enviamos para todo o Brasil', ratio: '3/4', only: ['slide-01.png'], legenda: 'legenda-mapa.md' },
     { base: 'posts-grade', dir: '04-carrossel-dono', title: 'Carrossel · Quem é o dono', ratio: '3/4' },
     { base: 'posts-grade', dir: '03-carrossel-processo', title: 'Carrossel · Como funciona', ratio: '3/4' },
   ] },
 ];
 
-function load(base, dir, i, title, ratio) {
-    const md = readFileSync(join(root, base, dir, 'legenda.md'), 'utf8');
+function load(base, dir, i, title, ratio, opt = {}) {
+    const md = readFileSync(join(root, base, dir, opt.legenda || 'legenda.md'), 'utf8');
     const caption = (md.split('## Legenda')[1] || '').split('\n---')[0].trim();
     let slides = readdirSync(join(root, base, dir, 'png')).filter(f => f.endsWith('.png')).sort()
+      .filter(f => !opt.only || opt.only.includes(f))
       .map(f => `${base}/${dir}/png/${f}`);
-    const preview = existsSync(join(root, base, dir, 'previa-grade.png')) ? `${base}/${dir}/previa-grade.png` : null;
+    const preview = !opt.only && existsSync(join(root, base, dir, 'previa-grade.png')) ? `${base}/${dir}/previa-grade.png` : null;
     if (preview) slides = [preview, ...slides];
     return { n: i + 1, dir: `${base}/${dir}`, title, caption, slides, ratio: ratio || '4/5', preview: !!preview };
 }
@@ -27,7 +28,7 @@ const out = versions.filter(v => v.items || existsSync(join(root, v.base))).map(
   id: v.id,
   name: v.name,
   posts: v.items
-    ? v.items.map((it, i) => load(it.base, it.dir, i, it.title, it.ratio))
+    ? v.items.map((it, i) => load(it.base, it.dir, i, it.title, it.ratio, it))
     : readdirSync(join(root, v.base)).sort().filter(d => existsSync(join(root, v.base, d, 'png')))
         .map((dir, i) => load(v.base, dir, i, v.titles[dir] || dir, v.ratio)),
 }));
