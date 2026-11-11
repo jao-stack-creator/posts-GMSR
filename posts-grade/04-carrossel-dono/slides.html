@@ -110,11 +110,10 @@
   .side img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
   .pano .photo{background:radial-gradient(55% 45% at 50% 45%,rgba(62,143,203,.32),transparent 70%),#0B111B}
   .pano .ask{position:absolute;left:0;width:1080px;top:170px;text-align:center;font-family:Wide;font-stretch:125%;font-weight:800;font-size:1000px;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(140,200,238,.45)}
-  .pano .edge{position:absolute;top:0;bottom:0;right:0;width:340px;z-index:1;background:linear-gradient(90deg,rgba(62,143,203,0),rgba(62,143,203,.55) 55%,#8CC8EE)}
-  .pano .steps{width:660px !important;top:400px !important}
-  .pano .row{padding:15px 0 !important}
-  .pano .row p{font-size:21px !important}
-  .c3.edgy:after{content:"";position:absolute;top:0;bottom:0;right:0;width:340px;z-index:1;background:linear-gradient(90deg,rgba(62,143,203,0),rgba(62,143,203,.55) 55%,#8CC8EE)}
+  .full.blue img{filter:grayscale(1) contrast(1.1) brightness(.95)}
+  .full.blue:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#1C4F86,#3E8FCB 55%,#1A3A63);mix-blend-mode:color}
+  .full.blue:after{z-index:2}
+  .edge2{position:absolute;top:0;bottom:0;right:0;width:460px;z-index:2;background:linear-gradient(90deg,rgba(62,143,203,0),rgba(62,143,203,.55) 55%,#8CC8EE)}
 </style>
 </head>
 <body>
@@ -129,7 +128,6 @@
       <rect x="1146" y="546" width="28" height="28" fill="#8CC8EE" transform="rotate(45 1160 560)"/>
     </svg>
 
-    <div class="edge"></div>
     <div class="w word a">GMSR</div>
     <div class="w word b">MAISON</div>
 
@@ -160,7 +158,7 @@
 
 <!-- 02 · APRESENTAÇÃO -->
 <section class="slide tile"><div class="c3">
-  <div class="full"><img src="../../assets/fotos/dono-2.jpg" style="object-position:50% 40%" alt=""></div>
+  <div class="full blue"><img src="../../assets/fotos/dono-2.jpg" style="object-position:50% 40%" alt=""></div><div class="edge2"></div>
   <div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
   <div style="position:absolute;left:80px;right:80px;bottom:120px;z-index:3">
     <div class="mono" style="font-size:20px;color:var(--sky)">◆ Prazer</div>
