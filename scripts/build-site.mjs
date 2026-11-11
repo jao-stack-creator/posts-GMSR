@@ -7,7 +7,8 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const versions = [
   { id: 'grade', name: 'Grade do perfil', items: [
-    { base: 'posts-grade', dir: '02-grade-mapa-processo', title: 'Mapa · Quem é o dono · Como funciona', ratio: '3/4' },
+    { base: 'posts-grade', dir: '02-grade-mapa-processo', title: 'Grade do perfil', ratio: '3/4' },
+    { base: 'posts-grade', dir: '03-carrossel-processo', title: 'Carrossel · Como funciona', ratio: '3/4' },
   ] },
 ];
 

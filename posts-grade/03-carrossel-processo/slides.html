@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>GMSR — Grade · Mapa | Marca + Processo</title>
+<link rel="stylesheet" href="../../shared/gmsr.css">
+<style>
+  /* 3 posts de 1080 x 1440 (3:4). Esquerda: post do mapa, sozinho.
+     Meio + direita: uma arte contínua de 2160 x 1440. */
+  @font-face{font-family:Wide;src:url(../../assets/fonts/archivo-latin-wdth-normal.woff2);font-weight:100 900;font-stretch:62% 125%}
+  .slide.tile{width:1080px;height:1440px;background:#0B111B}
+  .w{font-family:Wide;font-stretch:125%;text-transform:uppercase;line-height:1;color:#F3F0E9}
+  .w em{font-style:normal;color:var(--sky)}
+  .mono{font-family:Mono;letter-spacing:.14em;text-transform:uppercase}
+
+  /* ---------- ESQUERDA: mapa ---------- */
+  .solo{position:absolute;inset:0;background:radial-gradient(60% 45% at 50% 48%,rgba(62,143,203,.28),transparent 70%),#0B111B}
+  .solo .logo{position:absolute;left:80px;top:80px;width:96px}
+  .solo .tag{position:absolute;right:80px;top:112px;font-size:18px;color:rgba(243,240,233,.55)}
+  .solo .map{position:absolute;left:110px;top:200px;width:860px;height:860px;filter:drop-shadow(0 30px 60px rgba(0,0,0,.55))}
+  .solo .map .mapa{width:100%;height:100%}
+  .solo .t{position:absolute;left:80px;right:80px;top:1080px}
+  .solo .t .k{font-weight:400;font-size:46px}
+  .solo .t .h{font-weight:700;font-size:96px;margin-top:8px}
+  .solo .t .s{font-size:19px;color:rgba(243,240,233,.6);margin-top:26px}
+
+  /* ---------- MEIO + DIREITA: arte contínua ---------- */
+  .pano{position:absolute;top:0;width:2160px;height:1440px;background:
+    radial-gradient(40% 55% at 75% 45%,rgba(62,143,203,.22),transparent 70%),#0B111B;overflow:hidden}
+  .pano .photo{position:absolute;left:0;top:0;width:1180px;height:1440px;overflow:hidden}
+  .pano .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:saturate(.85) contrast(1.05)}
+  .pano .photo:after{content:"";position:absolute;inset:0;background:
+    linear-gradient(90deg,transparent 55%,#0B111B 100%),
+    linear-gradient(180deg,rgba(11,17,27,.55),transparent 22%,transparent 60%,rgba(11,17,27,.95))}
+  .pano .word{position:absolute;top:96px;font-weight:600;font-size:150px;z-index:3}
+  .pano .word.a{right:1110px}            /* "GMSR" termina na borda do post do meio */
+  .pano .word.b{left:1110px}             /* "MAISON" começa no post da direita */
+  .pano .who{position:absolute;left:80px;bottom:110px;z-index:3}
+  .pano .who .k{font-weight:400;font-size:46px}
+  .pano .who .h{font-weight:700;font-size:104px;margin-top:6px}
+  .pano .who .s{font-size:19px;color:rgba(243,240,233,.7);margin-top:22px}
+
+  .pano .route{position:absolute;inset:0;z-index:2;pointer-events:none}
+
+  .pano .steps{position:absolute;left:1230px;top:430px;width:860px;z-index:3}
+  .pano .steps .kick{font-size:20px;color:var(--sky)}
+  .pano .steps .h{font-weight:600;font-size:64px;margin-top:18px;line-height:1.08}
+  .pano .row{display:grid;grid-template-columns:92px 1fr;gap:18px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(243,240,233,.16)}
+  .pano .row:last-child{border-bottom:1px solid rgba(243,240,233,.16)}
+  .pano .row .n{font-family:Wide;font-stretch:125%;font-weight:700;font-size:44px;color:var(--sky)}
+  .pano .row b{font-family:Wide;font-stretch:125%;font-weight:600;font-size:28px;text-transform:uppercase;color:#F3F0E9;display:block}
+  .pano .row p{font-family:Inter;font-size:23px;color:rgba(243,240,233,.72);margin-top:6px}
+  .pano .cta{position:absolute;left:1230px;bottom:110px;z-index:3;font-size:19px;color:rgba(243,240,233,.7)}
+  .pano .cta em{font-style:normal;color:var(--sky)}
+
+  /* ---------- slides do carrossel ---------- */
+  .c3{position:absolute;inset:0;background:radial-gradient(60% 45% at 70% 35%,rgba(62,143,203,.22),transparent 70%),#0B111B}
+  .c3 .top{position:absolute;left:80px;right:80px;top:80px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+  .c3 .top img{width:84px}
+  .c3 .top span{font-size:18px;color:rgba(243,240,233,.55)}
+  .c3 .big{position:absolute;left:60px;top:150px;font-family:Wide;font-stretch:125%;font-weight:800;font-size:300px;line-height:1;color:#16202F;z-index:1}
+  .c3 .lbl{position:absolute;left:84px;top:230px;font-size:20px;color:var(--sky);z-index:3}
+  .c3 .body{position:absolute;left:80px;right:80px;top:440px;z-index:3}
+  .c3 .body .h{font-weight:600;font-size:70px;line-height:1.06}
+  .c3 .body p{font-family:Inter;font-size:30px;line-height:1.45;color:rgba(243,240,233,.8);margin-top:30px;max-width:880px}
+  .c3 .body p b{color:#F3F0E9;font-weight:600}
+  .c3 .foot{position:absolute;left:80px;right:80px;bottom:70px;display:flex;justify-content:space-between;font-size:17px;color:rgba(243,240,233,.5);z-index:5}
+  .c3 .foot em{font-style:normal;color:var(--sky)}
+  .phone{position:absolute;right:80px;top:770px;width:500px;background:#0E141E;border:1px solid rgba(243,240,233,.16);border-radius:28px;padding:26px;display:flex;flex-direction:column;gap:16px;z-index:4;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+  .phone .bar{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid rgba(243,240,233,.1);font-family:Inter;font-size:20px;color:#F3F0E9}
+  .phone .bar img{width:40px;height:40px;border-radius:50%}
+  .bub{font-family:Inter;font-size:23px;line-height:1.35;padding:14px 18px;max-width:86%}
+  .bub.me{background:rgba(243,240,233,.1);border-radius:18px 18px 18px 4px;align-self:flex-start;color:#F3F0E9}
+  .bub.us{background:#3E8FCB;color:#fff;border-radius:18px 18px 4px 18px;align-self:flex-end}
+  .media{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-self:flex-end;width:86%}
+  .media div{position:relative;aspect-ratio:1/1.15;overflow:hidden;border-radius:12px}
+  .media img{width:100%;height:100%;object-fit:cover;display:block}
+  .media .play{position:absolute;inset:0;display:grid;place-items:center}
+  .media .play i{width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;font-style:normal;color:#111;font-size:22px;padding-left:4px}
+  .media .dur{position:absolute;left:8px;bottom:8px;font-family:Mono;font-size:14px;color:#fff;background:rgba(0,0,0,.55);padding:2px 6px;border-radius:6px}
+  .ph{position:absolute;right:80px;top:790px;width:500px;height:500px;overflow:hidden;z-index:4;border:1px solid rgba(243,240,233,.16)}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph span{position:absolute;left:18px;bottom:16px;font-family:Mono;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#F3F0E9;background:rgba(11,17,27,.7);padding:6px 10px}
+  .chips{display:flex;flex-direction:column;gap:18px;margin-top:70px;width:390px}
+  .chips div{display:flex;gap:14px;align-items:baseline;font-family:Mono;font-size:21px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,240,233,.85)}
+  .chips i{font-style:normal;color:var(--sky)}
+  .mini{position:absolute;right:60px;top:760px;width:560px;height:560px;z-index:2}
+  .mini .mapa{width:100%;height:100%}
+</style>
+</head>
+<body>
+<template id="art">
+  <div class="pano">
+    <div class="photo"><img src="../../assets/fotos/dono.jpg" alt=""></div>
+
+    <!-- rota tracejada que liga o meio à direita -->
+    <svg class="route" viewBox="0 0 2160 1440">
+      <path d="M900 1240 C 1060 1220, 1020 760, 1160 560" fill="none" stroke="#8CC8EE" stroke-width="4" stroke-dasharray="4 16" stroke-linecap="round"/>
+      <circle cx="900" cy="1240" r="12" fill="#8CC8EE"/>
+      <rect x="1146" y="546" width="28" height="28" fill="#8CC8EE" transform="rotate(45 1160 560)"/>
+    </svg>
+
+    <div class="w word a">GMSR</div>
+    <div class="w word b">MAISON</div>
+
+    <!-- MEIO -->
+    <div class="who">
+      <div class="w k">Quem é</div>
+      <div class="w h">o dono<em>?</em></div>
+      <div class="mono s">Fundador · atendimento direto</div>
+    </div>
+
+    <!-- DIREITA -->
+    <div class="steps">
+      <div class="mono kick">◆ Como funciona</div>
+      <div class="w h">Do pedido<br>à sua <em>porta.</em></div>
+      <div style="margin-top:40px">
+        <div class="row"><span class="n">01</span><div><b>Referência</b><p>Você envia a foto ou o nome da peça.</p></div></div>
+        <div class="row"><span class="n">02</span><div><b>Seleção</b><p>Selecionamos a peça a dedo com o nosso fornecedor.</p></div></div>
+        <div class="row"><span class="n">03</span><div><b>Conferência</b><p>Recebemos o vídeo da peça e conferimos cada detalhe.</p></div></div>
+        <div class="row"><span class="n">04</span><div><b>Aprovação</b><p>Você recebe fotos e vídeos para aprovar.</p></div></div>
+        <div class="row"><span class="n">05</span><div><b>Entrega</b><p>Aprovou? A peça chega na sua casa, com rastreio.</p></div></div>
+      </div>
+    </div>
+    <div class="cta mono">Chame no Direct · <em>@gmsr_maison</em></div>
+  </div>
+</template>
+<!-- 01 · CAPA (é o post da direita da grade) -->
+<section class="slide tile" id="capa"></section>
+
+<!-- 02 · REFERÊNCIA -->
+<section class="slide tile"><div class="c3"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
+  <div class="big">01</div><div class="lbl mono">Referência</div>
+  <div class="body"><div class="w h">Você manda<br>a <em>referência.</em></div>
+    <p style="max-width:900px">Viu uma peça que quer? Mande <b>a foto ou o nome</b> dela no Direct, com o seu tamanho.</p></div>
+  <div class="phone">
+    <div class="bar"><img src="../../assets/logo/gmsr-badge.png" alt="">gmsr_maison</div>
+    <div class="bub me">Oi! Consegue essa peça pra mim? Tamanho M 🙏</div>
+    <div class="media" style="align-self:flex-start;grid-template-columns:1fr;width:44%"><div><img src="../../assets/fotos/acervo-mesa.jpg" style="object-position:50% 62%;filter:brightness(1.3)" alt=""></div></div>
+    <div class="bub us">Consigo sim! Já vou buscar pra você ◆</div>
+  </div>
+  <div class="foot mono"><span>Passo 1 de 5</span><span>Deslize →</span></div></div></section>
+
+<!-- 03 · SELEÇÃO -->
+<section class="slide tile"><div class="c3"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
+  <div class="big">02</div><div class="lbl mono">Seleção</div>
+  <div class="body"><div class="w h">Escolhida<br><em>a dedo.</em></div>
+    <p style="max-width:900px">Selecionamos a sua peça <b>uma a uma</b> com o nosso fornecedor, no modelo e no tamanho que você pediu.</p>
+    <div class="chips"><div><i>◆</i>Modelo certo</div><div><i>◆</i>Tamanho certo</div><div><i>◆</i>Sem surpresa</div></div></div>
+  <div class="ph"><img src="../../assets/fotos/acervo-mesa.jpg" style="object-position:55% 60%;filter:brightness(1.3)" alt=""><span>Curadoria GMSR</span></div>
+  <div class="foot mono"><span>Passo 2 de 5</span><span>Deslize →</span></div></div></section>
+
+<!-- 04 · CONFERÊNCIA -->
+<section class="slide tile"><div class="c3"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
+  <div class="big">03</div><div class="lbl mono">Conferência</div>
+  <div class="body"><div class="w h">Cada detalhe,<br><em>conferido.</em></div>
+    <p style="max-width:900px">Antes de seguir, recebemos <b>o vídeo da peça</b> e conferimos tudo.</p>
+    <div class="chips"><div><i>✓</i>Costura e acabamento</div><div><i>✓</i>Tags e etiquetas</div><div><i>✓</i>Embalagem</div><div><i>✓</i>Medidas</div></div></div>
+  <div class="ph"><img src="../../assets/fotos/zegna.jpg" alt=""><span>Vídeo de conferência</span></div>
+  <div class="foot mono"><span>Passo 3 de 5</span><span>Deslize →</span></div></div></section>
+
+<!-- 05 · APROVAÇÃO -->
+<section class="slide tile"><div class="c3"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
+  <div class="big">04</div><div class="lbl mono">Aprovação</div>
+  <div class="body"><div class="w h">Você aprova<br><em>antes.</em></div>
+    <p style="max-width:900px">Mandamos <b>fotos e vídeos</b> da sua peça. Nada é enviado sem a sua aprovação.</p></div>
+  <div class="phone">
+    <div class="bar"><img src="../../assets/logo/gmsr-badge.png" alt="">gmsr_maison</div>
+    <div class="media">
+      <div><img src="../../assets/fotos/zegna.jpg" alt=""></div>
+      <div><img src="../../assets/fotos/zegna.jpg" style="object-position:30% 60%;transform:scale(1.4)" alt=""><span class="play"><i>▶</i></span><span class="dur">0:18</span></div>
+    </div>
+    <div class="bub us">Sua peça chegou! Seguem as fotos e o vídeo pra você conferir ◆</div>
+    <div class="bub me">Perfeito, pode enviar!</div>
+  </div>
+  <div class="foot mono"><span>Passo 4 de 5</span><span>Deslize →</span></div></div></section>
+
+<!-- 06 · ENTREGA -->
+<section class="slide tile"><div class="c3"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
+  <div class="big">05</div><div class="lbl mono">Entrega</div>
+  <div class="body"><div class="w h">Na sua<br><em>casa.</em></div>
+    <p style="max-width:900px">Embalada com cuidado e com <b>código de rastreio</b>, para qualquer lugar do Brasil.</p>
+    <div class="chips"><div><i>◆</i>27 estados</div><div><i>◆</i>Rastreio</div><div><i>◆</i>Do Oiapoque ao Chuí</div></div></div>
+  <div class="mini"><div class="mapa" data-cores="#8CC8EE,#5FA8DF,#A9D6F3,#3E8FCB" data-fundo="#0B111B" data-label="#0B111B"></div></div>
+  <div class="foot mono"><span>Passo 5 de 5</span><span>Deslize →</span></div></div></section>
+
+<!-- 07 · FINAL -->
+<section class="slide tile"><div class="c3" style="background:radial-gradient(60% 45% at 50% 45%,rgba(62,143,203,.3),transparent 70%),#0B111B"><div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
+  <div style="position:absolute;left:80px;right:80px;top:380px;text-align:center;z-index:3">
+    <img src="../../assets/logo/gmsr-mono-branco.png" style="width:230px" alt="">
+    <div class="w" style="font-weight:600;font-size:78px;margin-top:60px;line-height:1.08">Mande a sua<br><em>referência.</em></div>
+    <p style="font-family:Inter;font-size:30px;color:rgba(243,240,233,.8);margin-top:34px">A gente cuida do resto.</p>
+    <div class="mono" style="display:inline-block;margin-top:60px;background:#F3F0E9;color:#0B111B;padding:22px 40px;font-size:24px">Direct · @gmsr_maison</div>
+  </div>
+  <div class="foot mono"><span>Envio para todo o Brasil</span><span><em>GMSR Maison</em></span></div></div></section>
+
+<script src="../../assets/mapa-brasil.js"></script>
+<script>
+  const capa = document.getElementById('capa');
+  capa.append(document.getElementById('art').content.cloneNode(true));
+  capa.querySelector('.pano').style.left = '-1080px';
+  const all = [...document.querySelectorAll('.slide')];
+  all.forEach((s, i) => s.querySelectorAll('.counter').forEach(c => c.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(all.length).padStart(2, '0')));
+</script>
+<script src="../../shared/mapa.js"></script>
+</body>
+</html>
