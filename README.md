@@ -12,7 +12,7 @@ O site é o `index.html` da raiz. Depois de gerar PNGs novos, rode `npm run site
 
 ## Posts
 
-O site mostra a **grade do perfil** [`posts-grade/02-grade-mapa-processo`](posts-grade/02-grade-mapa-processo): o mapa na esquerda (sozinho) e, no meio e na direita, uma arte contínua com "Quem é o dono?" e "Como funciona". A ordem de postagem está no `legenda.md`. O post da direita vira o carrossel [`posts-grade/03-carrossel-processo`](posts-grade/03-carrossel-processo) (6 slides), cujo slide 1 é a própria arte da grade.
+O site mostra a **grade do perfil** [`posts-grade/02-grade-mapa-processo`](posts-grade/02-grade-mapa-processo): o mapa na esquerda (sozinho) e, no meio e na direita, uma arte contínua com "Quem é o dono?" e "Como funciona". A ordem de postagem está no `legenda.md`. O post do meio vira o carrossel [`posts-grade/04-carrossel-dono`](posts-grade/04-carrossel-dono) (5 slides). O post da direita vira o carrossel [`posts-grade/03-carrossel-processo`](posts-grade/03-carrossel-processo) (6 slides), cujo slide 1 é a própria arte da grade.
 
 Os posts não citam nomes de marcas nem afirmam originalidade. As pastas `posts/`, `posts-v2/`, `posts-v3/`, `posts-extra/` e `posts-grade/01-grade-loja` são rascunhos antigos e não aparecem no site.
 
