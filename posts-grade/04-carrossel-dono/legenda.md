@@ -11,7 +11,11 @@ O slide 1 é o post do meio da grade. Use este carrossel **no lugar** dele: no p
 
 Quem é o dono da GMSR? ◆
 
-Prazer, Gabriel. A GMSR é uma curadoria de Brasília: ele teve a ideia de criar a loja para inovar e trazer peças exclusivas, que não ficam disponíveis por muito tempo.
+Prazer, Gabriel. Sou o fundador da GMSR Maison, marca criada em Brasília para oferecer uma experiência diferente no universo do luxo.
+
+Mais do que uma loja: uma curadoria exclusiva, com atenção a cada detalhe e atendimento personalizado.
+
+A GMSR Maison nasceu para quem valoriza mais do que produtos: valoriza experiências.
 
 📩 Fale com a gente: @gmsr_maison
 
