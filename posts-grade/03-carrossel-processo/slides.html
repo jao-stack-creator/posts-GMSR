@@ -91,12 +91,16 @@
   .refimg img{width:100%;display:block}
   .pano .photo{background:radial-gradient(55% 45% at 50% 45%,rgba(62,143,203,.32),transparent 70%),#0B111B}
   .pano .ask{position:absolute;left:0;width:1080px;top:170px;text-align:center;font-family:Wide;font-stretch:125%;font-weight:800;font-size:1000px;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(140,200,238,.45)}
+  .pano .photo.dono{width:1360px;background:#0B111B}
+  .pano .photo.dono img{filter:grayscale(1) contrast(1.1) brightness(.9)}
+  .pano .photo.dono:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#1C4F86,#3E8FCB 55%,#163A63);mix-blend-mode:color}
+  .pano .photo.dono:after{z-index:2;background:linear-gradient(90deg,transparent 45%,rgba(11,17,27,.85) 82%,#0B111B 100%),linear-gradient(180deg,rgba(11,17,27,.55),transparent 22%,transparent 58%,rgba(11,17,27,.95)) !important}
 </style>
 </head>
 <body>
 <template id="art">
   <div class="pano">
-    <div class="photo"><div class="ask">?</div></div>
+    <div class="photo dono"><img src="../../assets/fotos/dono.jpg" style="object-position:62% 40%" alt=""></div>
 
     <!-- rota tracejada que liga o meio à direita -->
     <svg class="route" viewBox="0 0 2160 1440">

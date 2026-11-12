@@ -112,12 +112,16 @@
   .pano .ask{position:absolute;left:0;width:1080px;top:170px;text-align:center;font-family:Wide;font-stretch:125%;font-weight:800;font-size:1000px;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(140,200,238,.45)}
   .full.blue:after{z-index:2}
   .edge2{position:absolute;top:0;bottom:0;right:0;width:460px;z-index:2;background:linear-gradient(90deg,rgba(62,143,203,0),rgba(62,143,203,.55) 55%,#8CC8EE)}
+  .pano .photo.dono{width:1360px;background:#0B111B}
+  .pano .photo.dono img{filter:grayscale(1) contrast(1.1) brightness(.9)}
+  .pano .photo.dono:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#1C4F86,#3E8FCB 55%,#163A63);mix-blend-mode:color}
+  .pano .photo.dono:after{z-index:2;background:linear-gradient(90deg,transparent 45%,rgba(11,17,27,.85) 82%,#0B111B 100%),linear-gradient(180deg,rgba(11,17,27,.55),transparent 22%,transparent 58%,rgba(11,17,27,.95)) !important}
 </style>
 </head>
 <body>
 <template id="art">
   <div class="pano">
-    <div class="photo"><div class="ask">?</div></div>
+    <div class="photo dono"><img src="../../assets/fotos/dono.jpg" style="object-position:62% 40%" alt=""></div>
 
     <!-- rota tracejada que liga o meio à direita -->
     <svg class="route" viewBox="0 0 2160 1440">
@@ -154,20 +158,16 @@
 <!-- 01 · CAPA (post do meio da grade) -->
 <section class="slide tile" id="capa"></section>
 
-<!-- 02 · APRESENTAÇÃO -->
-<section class="slide tile"><div class="c3">
-  <div class="full blue"><img src="../../assets/fotos/dono-2.jpg" style="object-position:50% 40%" alt=""></div><div class="edge2"></div>
+<!-- 02 · A CURADORIA (BSB) -->
+<section class="slide tile"><div class="c3" style="background:radial-gradient(70% 55% at 30% 40%,#2C6BAE 0%,#173F6D 45%,#0B111B 100%)">
   <div class="top"><img src="../../assets/logo/gmsr-mono-branco.png" alt=""><span class="mono counter"></span></div>
-  <div style="position:absolute;left:80px;right:80px;bottom:120px;z-index:3">
-    <div class="mono" style="font-size:20px;color:var(--sky)">◆ Prazer</div>
-    <div class="w" style="font-weight:700;font-size:64px;margin-top:12px;line-height:1.02">O dono da <em>GMSR.</em></div>
-    <div class="facts">
-      <div><b>18</b><span>anos</span></div>
-      <div><b>BSB</b><span>Brasília · DF</span></div>
-      <div><b>1</b><span>maison</span></div>
-    </div>
+  <div class="big" style="color:rgba(140,200,238,.16)">BSB</div><div class="lbl mono" style="color:#BFDDF2">A curadoria</div>
+  <div class="body" style="top:560px;right:560px">
+    <div class="w h" style="font-size:66px">Prazer,<br><em style="color:#BFDDF2">Gabriel.</em></div>
+    <p style="color:rgba(243,240,233,.88)">A GMSR é uma <b>curadoria de Brasília.</b> O Gabriel teve a ideia de criar a loja para inovar e trazer <b>peças exclusivas</b>, que não ficam disponíveis por muito tempo.</p>
   </div>
-  <div class="foot mono"><span>15°47′ S · 47°52′ O</span><span>Deslize →</span></div>
+  <div class="side" style="top:330px;width:440px;height:900px;border-color:rgba(243,240,233,.3)"><img src="../../assets/fotos/dono-2.jpg" style="object-position:50% 40%" alt=""></div>
+  <div class="foot mono" style="color:rgba(243,240,233,.7)"><span>15°47′ S · 47°52′ O · Brasília</span><span>GMSR Maison</span></div>
 </div></section>
 
 <script>

@@ -11,17 +11,11 @@ O slide 1 é o post do meio da grade. Use este carrossel **no lugar** dele: no p
 
 Quem é o dono da GMSR? ◆
 
-18 anos, de Brasília, à frente da GMSR Maison. Quem escolhe cada peça é quem te atende:
+Prazer, Gabriel. A GMSR é uma curadoria de Brasília: ele teve a ideia de criar a loja para inovar e trazer peças exclusivas, que não ficam disponíveis por muito tempo.
 
-◆ Curadoria: cada peça escolhida a dedo
-◆ Transparência: fotos e vídeos antes do envio
-◆ Atendimento: direto no Direct, do primeiro "oi" até a entrega
-
-De Brasília para todo o Brasil.
-
-📩 Fale com ele: @gmsr_maison
+📩 Fale com a gente: @gmsr_maison
 
 .
 .
 .
-#gmsrmaison #brasilia #boutique #modamasculina #empreendedorjovem
+#gmsrmaison #brasilia #curadoria #boutique #modamasculina

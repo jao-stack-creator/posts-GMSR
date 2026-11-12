@@ -19,7 +19,7 @@ window.VERSIONS = [
         "n": 2,
         "dir": "posts-grade/04-carrossel-dono",
         "title": "Carrossel · Quem é o dono",
-        "caption": "Quem é o dono da GMSR? ◆\n\n18 anos, de Brasília, à frente da GMSR Maison. Quem escolhe cada peça é quem te atende:\n\n◆ Curadoria: cada peça escolhida a dedo\n◆ Transparência: fotos e vídeos antes do envio\n◆ Atendimento: direto no Direct, do primeiro \"oi\" até a entrega\n\nDe Brasília para todo o Brasil.\n\n📩 Fale com ele: @gmsr_maison\n\n.\n.\n.\n#gmsrmaison #brasilia #boutique #modamasculina #empreendedorjovem",
+        "caption": "Quem é o dono da GMSR? ◆\n\nPrazer, Gabriel. A GMSR é uma curadoria de Brasília: ele teve a ideia de criar a loja para inovar e trazer peças exclusivas, que não ficam disponíveis por muito tempo.\n\n📩 Fale com a gente: @gmsr_maison\n\n.\n.\n.\n#gmsrmaison #brasilia #curadoria #boutique #modamasculina",
         "slides": [
           "posts-grade/04-carrossel-dono/png/slide-01.png",
           "posts-grade/04-carrossel-dono/png/slide-02.png"
