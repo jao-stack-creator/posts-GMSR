@@ -59,6 +59,10 @@
   .pano .photo.dono:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#1C4F86,#3E8FCB 55%,#163A63);mix-blend-mode:color}
   .pano .photo.dono:after{z-index:2;background:linear-gradient(90deg,transparent 45%,rgba(11,17,27,.85) 82%,#0B111B 100%),linear-gradient(180deg,rgba(11,17,27,.55),transparent 22%,transparent 58%,rgba(11,17,27,.95)) !important}
   .pano .ask2{z-index:3;-webkit-text-stroke:4px rgba(191,221,242,.7)}
+  .pano .photo.blur img{position:absolute;inset:0;width:1080px;height:100%;object-fit:cover;object-position:50% 40%;filter:blur(14px) brightness(.75) saturate(.9);transform:scale(1.08)}
+  .pano .photo.blur .ask{z-index:3;-webkit-text-stroke:4px rgba(191,221,242,.75)}
+  .pano .photo.blur:after{z-index:2}
+  .pano .edge3{position:absolute;top:0;bottom:0;left:820px;width:260px;z-index:2;background:linear-gradient(90deg,rgba(62,143,203,0),rgba(62,143,203,.5) 60%,#8CC8EE)}
 </style>
 </head>
 <body>
@@ -79,7 +83,8 @@
 
 <template id="art">
   <div class="pano">
-    <div class="photo"><div class="ask">?</div></div>
+    <div class="photo blur"><img src="../../assets/fotos/dono-blur.jpg" alt=""><div class="ask">?</div></div>
+    <div class="edge3"></div>
 
     <!-- rota tracejada que liga o meio à direita -->
     <svg class="route" viewBox="0 0 2160 1440">
