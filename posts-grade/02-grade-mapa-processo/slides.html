@@ -58,6 +58,7 @@
   .pano .photo.dono img{filter:grayscale(1) contrast(1.1) brightness(.9)}
   .pano .photo.dono:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#1C4F86,#3E8FCB 55%,#163A63);mix-blend-mode:color}
   .pano .photo.dono:after{z-index:2;background:linear-gradient(90deg,transparent 45%,rgba(11,17,27,.85) 82%,#0B111B 100%),linear-gradient(180deg,rgba(11,17,27,.55),transparent 22%,transparent 58%,rgba(11,17,27,.95)) !important}
+  .pano .ask2{z-index:3;-webkit-text-stroke:4px rgba(191,221,242,.7)}
 </style>
 </head>
 <body>
@@ -78,7 +79,7 @@
 
 <template id="art">
   <div class="pano">
-    <div class="photo dono"><img src="../../assets/fotos/dono.jpg" style="object-position:62% 40%" alt=""></div>
+    <div class="photo dono"><img src="../../assets/fotos/dono.jpg" style="object-position:62% 40%" alt=""><div class="ask ask2">?</div></div>
 
     <!-- rota tracejada que liga o meio à direita -->
     <svg class="route" viewBox="0 0 2160 1440">
